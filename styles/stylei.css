@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(219, 207, 207);
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(177, 156, 156);
+    margin: 5% 10% 0 10%;
+    
+}
+
+.count {
+    display: flex;
+    justify-content: center;
+}
+
+.exersize {
+    margin: 30px;
+}
+
+button {
+    height: 30px;
+    width: 30px;
+}
+
+.minus5, .minus1, .plus1, .score {
+    margin-right: 5px;
+}
+
+.score {
+    font-size: 20px;
+    align-content: center;
+}

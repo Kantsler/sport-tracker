@@ -1,4 +1,4 @@
-window.localStorage;
+import 'https://tomashubelbauer.github.io/github-pages-local-storage/index.js';
 
 {
     let scorePushUps = document.getElementById("push-up");

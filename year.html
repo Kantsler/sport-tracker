@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year progress</title>
+    <link rel="stylesheet" href="styles/styley.css">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+    <button id="open-sidebar" onclick="openSidebar()"><img id="menu" src="/images/menu.svg"></button>
+    <nav id="navbar">
+        <ul>
+            <li><button id="close-sidebar" onclick="closeSidebar()"><img id="close" src="/images/close.svg"></button></li>
+            <li id="main"><a href="index.html">Главная</a></li>
+            <li id="progress">Прогресс:</li>
+            <li id="week"><a href="week.html">Неделя</a></li>
+            <li id="month"><a href="month.html">Месяц</a></li>
+            <li id="year"><a href="year.html">Год</a></li>
+        </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()"></div>
+    <div id="chart-container">
+        <div class="graph">
+            <div class="title push-ups">Отжимания</div>
+            <canvas id="pushUps"></canvas>
+        </div>
+        <div class="graph">
+            <div class="title pull-ups">Подтягивания прямым хватом</div>
+            <canvas id="pullUps"></canvas>
+        </div>
+        <div class="graph">
+            <div class="title sit-ups">Скручивания пресса</div>
+            <canvas id="sitUps"></canvas>
+        </div>
+        <div class="graph">
+            <div class="title burpees">Бёрпи</div>
+            <canvas id="burpees"></canvas>
+        </div>
+        <div class="graph">
+            <div class="title chin-ups">Подтягивания обратным хватом</div>
+            <canvas id="chinUps"></canvas>
+        </div>
+        <div class="graph">
+            <div class="title squats">Приседания</div>
+            <canvas id="squats"></canvas>
+        </div>
+    </div>
+    <script src="scripts/scripty.js" defer></script>
+</body>
+</html>

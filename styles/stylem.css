@@ -65,8 +65,8 @@ a {
 }
 
 canvas {
-    width: 80vwvw;
-    height: 30vh;
+    width: 80vw;
+    height: 80vh;
     max-width: 100%;
     max-height: 100%;
 }
@@ -80,7 +80,6 @@ canvas {
     background-color: rgb(68, 68, 68);
     border: solid black 3px;
     gap: 5px;
-    height: max(auto,80vh);
     margin-top: 2%;
     margin-bottom: 2%;
     justify-self: center;

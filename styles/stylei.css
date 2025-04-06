@@ -221,3 +221,10 @@ button {
         margin: 5% 5% 5% 5%;
     }
 }
+
+@media screen and (max-width: 600px) {
+    #container {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6, auto);
+    }
+}

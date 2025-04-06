@@ -2,8 +2,40 @@ import ('https://tomashubelbauer.github.io/github-pages-local-storage/index.js')
 
 const now = new Date();
 const newDay = now.getDay();
+const month = new Date().getMonth()+1;
 
 if (localStorage.currentDay!=newDay) {
+    {
+        const yearPushUps = JSON.parse(localStorage.getItem("yearPushUps")) || {};
+        yearPushUps[month] = +yearPushUps[month] + +localStorage.scorePushUps;
+        localStorage.setItem("yearPushUps", JSON.stringify(yearPushUps));
+    } //year push ups
+    {
+        const yearPullUps = JSON.parse(localStorage.getItem("yearPullUps")) || {};
+        yearPullUps[month] = +yearPullUps[month] + +localStorage.scorePullUps;
+        localStorage.setItem("yearPullUps", JSON.stringify(yearPullUps));
+    } //year pull ups
+    {
+        const yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
+        yearSitUps[month] = +yearSitUps[month] + +localStorage.scoreSitUps;
+        localStorage.setItem("yearSitUps", JSON.stringify(yearSitUps));
+    } //year sit ups
+    {
+        const yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
+        yearBurpees[month] = +yearBurpees[month] + +localStorage.scoreBurpees;
+        localStorage.setItem("yearBurpees", JSON.stringify(yearBurpees));       
+    } //year burpees
+    {
+        const yearChinUps = JSON.parse(localStorage.getItem("yearChinUps")) || {};
+        yearChinUps[month] = +yearChinUps[month] + +localStorage.scoreChinUps;
+        localStorage.setItem("yearChinUps", JSON.stringify(yearChinUps)); 
+    } //year chin ups
+    {
+        const yearSquats = JSON.parse(localStorage.getItem("yearSquats")) || {};
+        yearSquats[month] = +yearSquats[month] + +localStorage.scoreSquats;
+        localStorage.setItem("yearSquats", JSON.stringify(yearSquats));
+    } //year squats
+
     localStorage.scorePushUps = 0;
     localStorage.scorePullUps = 0;
     localStorage.scoreSitUps = 0;
@@ -317,7 +349,6 @@ if (newDay==6) {
 }
 
 const today = new Date().getDate();
-const month = new Date().getMonth()+1;
 {
     const monthPushUps = JSON.parse(localStorage.getItem("monthPushUps")) || {};
     if (!monthPushUps[today]) {
@@ -327,10 +358,6 @@ const month = new Date().getMonth()+1;
     if (!monthPushUps.sum) {
         monthPushUps.sum = 0;
     }
-    monthPushUps.sum = monthPushUps.sum + Number(localStorage.scorePushUps);
-    const yearPushUps = JSON.parse(localStorage.getItem("yearPushUps")) || {};
-    yearPushUps[month] = monthPushUps.sum;
-    localStorage.setItem("yearPushUps", JSON.stringify(yearPushUps));
     localStorage.setItem("monthPushUps", JSON.stringify(monthPushUps));
 } //month push ups
 
@@ -343,10 +370,6 @@ const month = new Date().getMonth()+1;
     if (!monthPullUps.sum) {
         monthPullUps.sum = 0;
     }
-    monthPullUps.sum = monthPullUps.sum + Number(localStorage.scorePullUps);
-    const yearPullUps = JSON.parse(localStorage.getItem("yearPullUps")) || {};
-    yearPullUps[month] = monthPullUps.sum;
-    localStorage.setItem("yearPullUps", JSON.stringify(yearPullUps));
     localStorage.setItem("monthPullUps", JSON.stringify(monthPullUps));
 } //month pull ups
 
@@ -359,10 +382,6 @@ const month = new Date().getMonth()+1;
     if (!monthSitUps.sum) {
         monthSitUps.sum = 0;
     }
-    monthSitUps.sum = monthSitUps.sum + Number(localStorage.scoreSitUps);
-    const yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
-    yearSitUps[month] = monthSitUps.sum;
-    localStorage.setItem("yearSitUps", JSON.stringify(yearSitUps));
     localStorage.setItem("monthSitUps", JSON.stringify(monthSitUps));
 } //month sit ups
 
@@ -375,10 +394,6 @@ const month = new Date().getMonth()+1;
     if (!monthBurpees.sum) {
         monthBurpees.sum = 0;
     }
-    monthBurpees.sum = monthBurpees.sum + Number(localStorage.scoreBurpees);
-    const yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
-    yearBurpees[month] = monthBurpees.sum;
-    localStorage.setItem("yearBurpees", JSON.stringify(yearBurpees));
     localStorage.setItem("monthBurpees", JSON.stringify(monthBurpees));
 } //month burpees
 
@@ -391,10 +406,6 @@ const month = new Date().getMonth()+1;
     if (!monthChinUps.sum) {
         monthChinUps.sum = 0;
     }
-    monthChinUps.sum = monthChinUps.sum + Number(localStorage.scoreChinUps);
-    const yearChinUps = JSON.parse(localStorage.getItem("yearChinUps")) || {};
-    yearChinUps[month] = monthChinUps.sum;
-    localStorage.setItem("yearChinUps", JSON.stringify(yearChinUps));
     localStorage.setItem("monthChinUps", JSON.stringify(monthChinUps));
 } //month chin ups
 
@@ -407,10 +418,6 @@ const month = new Date().getMonth()+1;
     if (!monthSquats.sum) {
         monthSquats.sum = 0;
     }
-    monthSquats.sum = monthSquats.sum + Number(localStorage.scoreSquats);
-    const yearSquats = JSON.parse(localStorage.getItem("yearSquats")) || {};
-    yearSquats[month] = monthSquats.sum;
-    localStorage.setItem("yearSquats", JSON.stringify(yearSquats));
     localStorage.setItem("monthSquats", JSON.stringify(monthSquats));
 } //month squats
 

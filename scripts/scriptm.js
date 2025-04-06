@@ -63,7 +63,7 @@ if (dayOfMonth=="01"){
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{
@@ -110,7 +110,7 @@ if (dayOfMonth=="01"){
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{
@@ -157,7 +157,7 @@ if (dayOfMonth=="01"){
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{
@@ -204,7 +204,7 @@ if (dayOfMonth=="01"){
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{
@@ -251,7 +251,7 @@ if (dayOfMonth=="01"){
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{
@@ -298,7 +298,7 @@ if (dayOfMonth=="01"){
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{

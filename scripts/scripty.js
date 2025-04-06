@@ -6,7 +6,7 @@ const yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
 const yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
 const yearChinUps = JSON.parse(localStorage.getItem("yearChinUps")) || {};
 const yearSquats = JSON.parse(localStorage.getItem("yearSquats")) || {};
-const xValues = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
 
 
 {
@@ -33,7 +33,7 @@ const xValues = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{
@@ -71,7 +71,7 @@ const xValues = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{
@@ -109,7 +109,7 @@ const xValues = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{
@@ -147,7 +147,7 @@ const xValues = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{
@@ -185,7 +185,7 @@ const xValues = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{
@@ -223,7 +223,7 @@ const xValues = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
                 xAxes: [{
                   ticks: {
                     fontColor: '#FFF',
-                    fontSize: 10
+                    fontSize: 8
                   }
                 }],
                 yAxes: [{

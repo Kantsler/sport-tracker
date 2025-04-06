@@ -15,12 +15,7 @@ const xValues = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"];
         },
         options: {
             legend: {display: false},
-            title: {
-              display: false,
-              text: "Отжимания за эту неделю",
-              fontColor: '#FFF',
-              fontSize: 16
-            },
+            title: {display: false},
             scales: {
                 xAxes: [{
                   ticks: {
@@ -52,12 +47,7 @@ const xValues = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"];
     },
     options: {
         legend: {display: false},
-        title: {
-            display: false,
-            text: "Подтягивания прямым хватом за эту неделю",
-            fontColor: '#FFF',
-            fontSize: 16
-        },
+        title: {display: false,},
         scales: {
             xAxes: [{
               ticks: {
@@ -89,12 +79,7 @@ const xValues = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"];
     },
     options: {
         legend: {display: false},
-        title: {
-            display: false,
-            text: "Скручивания пресса за эту неделю",
-            fontColor: '#FFF',
-            fontSize: 16
-        },
+        title: {display: false,},
         scales: {
             xAxes: [{
               ticks: {
@@ -126,12 +111,7 @@ const xValues = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"];
         },
         options: {
             legend: {display: false},
-            title: {
-                display: false,
-                text: "Бёрпи за эту неделю",
-                fontColor: '#FFF',
-                fontSize: 16
-            },
+            title: {display: false,},
             scales: {
                 xAxes: [{
                   ticks: {
@@ -163,12 +143,7 @@ const xValues = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"];
     },
     options: {
         legend: {display: false},
-        title: {
-            display: false,
-            text: "Подтягивания обратным хватом за эту неделю",
-            fontColor: '#FFF',
-            fontSize: 16
-        },
+        title: {display: false},
         scales: {
             xAxes: [{
               ticks: {
@@ -200,12 +175,7 @@ const xValues = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"];
     },
     options: {
         legend: {display: false},
-        title: {
-            display: false,
-            text: "Приседания за эту неделю",
-            fontColor: '#FFF',
-            fontSize: 16
-        },
+        title: {display: false},
         scales: {
             xAxes: [{
               ticks: {

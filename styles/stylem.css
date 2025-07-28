@@ -169,6 +169,9 @@ button {
 .squats::before {
     background-color: rgb(43, 12, 63);
 }
+.swim::before {
+    background-color: rgb(0, 54, 116);
+}
 
 @media screen and (max-width: 820px) {
     #open-sidebar, #close-sidebar {

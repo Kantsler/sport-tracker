@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Спорт</title>
     <link rel="stylesheet" href="styles/stylei.css">
+    <link rel="icon" href="images/arm.png">
 </head>
 <body>
     <button id="open-sidebar" onclick="openSidebar()"><img id="menu" src="/images/menu.svg"></button>
@@ -41,6 +42,24 @@
             </div>
         </div>
         <div class="exersize">
+            <img class="picture chin-ups" src="images/chin ups.jpg" alt="chin ups">
+            <div class="count">
+                <button class="minus5" onclick="m5chin()">-5</button>
+                <button class="minus1" onclick="m1chin()">-1</button>
+                <div class="score chin-ups" id="chin-up">0</div>
+                <button class="plus1" onclick="p1chin()">+1</button>
+                <button class="plus5" onclick="p5chin()">+5</button>
+            </div>
+        </div>
+        <div class="exersize">
+            <img class="picture swim" src="images/swim.jpg" alt="swim">
+            <div class="count">
+                <button class="minus100" onclick="m100swim()">-100</button>
+                <div class="score swim" id="swim">0</div>
+                <button class="plus100" onclick="p100swim()">+100</button>
+            </div>
+        </div>
+        <div class="exersize">
             <img class="picture sit-ups" src="images/sit up.jfif" alt="sit ups">
             <div class="count">
                 <button class="minus5" onclick="m5sit()">-5</button>
@@ -61,16 +80,6 @@
             </div>
         </div>
         <div class="exersize">
-            <img class="picture chin-ups" src="images/chin ups.jpg" alt="chin ups">
-            <div class="count">
-                <button class="minus5" onclick="m5chin()">-5</button>
-                <button class="minus1" onclick="m1chin()">-1</button>
-                <div class="score chin-ups" id="chin-up">0</div>
-                <button class="plus1" onclick="p1chin()">+1</button>
-                <button class="plus5" onclick="p5chin()">+5</button>
-            </div>
-        </div>
-        <div class="exersize">
             <img class="picture squats" src="images/squats.jpg" alt="squats">
             <div class="count">
                 <button class="minus5" onclick="m5squat()">-5</button>
@@ -81,6 +90,7 @@
             </div>
         </div>
     </div>
+
     <script src="scripts/scripti.js" defer></script>
 </body>
 </html>

@@ -13,6 +13,7 @@ const monthPullUps = JSON.parse(localStorage.getItem("monthPullUps")) || {};
 const monthSitUps = JSON.parse(localStorage.getItem("monthSitUps")) || {};
 const monthBurpees = JSON.parse(localStorage.getItem("monthBurpees")) || {};
 const monthChinUps = JSON.parse(localStorage.getItem("monthChinUps")) || {};
+const monthSwim = JSON.parse(localStorage.getItem("monthSwim")) || {};
 const monthSquats = JSON.parse(localStorage.getItem("monthSquats")) || {};
 
 
@@ -51,6 +52,7 @@ if (dayOfMonth=="01"){
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(206, 13, 13)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(206, 13, 13)',
             backgroundColor: 'rgba(206, 13, 13, 0.3)'
@@ -98,6 +100,7 @@ if (dayOfMonth=="01"){
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(44, 138, 182)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(44, 138, 182)',
             backgroundColor: 'rgba(44, 138, 182, 0.3)'
@@ -145,6 +148,7 @@ if (dayOfMonth=="01"){
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(15, 114, 23)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(15, 114, 23)',
             backgroundColor: 'rgba(15, 114, 23, 0.3)'
@@ -192,6 +196,7 @@ if (dayOfMonth=="01"){
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(22, 19, 182)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(22, 19, 182)',
             backgroundColor: 'rgba(22, 19, 182, 0.3)'
@@ -239,6 +244,7 @@ if (dayOfMonth=="01"){
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(203, 238, 78)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(203, 238, 78)',
             backgroundColor: 'rgba(203, 238, 78, 0.3)'
@@ -266,6 +272,54 @@ if (dayOfMonth=="01"){
 } //chin ups chart
 
 {
+    let yValuesSwim = [];
+    if (xValues.length == 28) {
+        yValuesSwim = [monthSwim[1],monthSwim[2],monthSwim[3],monthSwim[4],monthSwim[5],monthSwim[6],monthSwim[7],monthSwim[8],monthSwim[9],monthSwim[10],monthSwim[11],monthSwim[12],monthSwim[13],monthSwim[14],monthSwim[15],monthSwim[16],monthSwim[17],monthSwim[18],monthSwim[19],monthSwim[20],monthSwim[21],monthSwim[22],monthSwim[23],monthSwim[24],monthSwim[25],monthSwim[26],monthSwim[27],monthSwim[28]];
+    } else if (xValues.length == 29) {
+        yValuesSwim = [monthSwim[1],monthSwim[2],monthSwim[3],monthSwim[4],monthSwim[5],monthSwim[6],monthSwim[7],monthSwim[8],monthSwim[9],monthSwim[10],monthSwim[11],monthSwim[12],monthSwim[13],monthSwim[14],monthSwim[15],monthSwim[16],monthSwim[17],monthSwim[18],monthSwim[19],monthSwim[20],monthSwim[21],monthSwim[22],monthSwim[23],monthSwim[24],monthSwim[25],monthSwim[26],monthSwim[27],monthSwim[28],monthSwim[29]];
+    } else if (xValues.length == 30) {
+        yValuesSwim = [monthSwim[1],monthSwim[2],monthSwim[3],monthSwim[4],monthSwim[5],monthSwim[6],monthSwim[7],monthSwim[8],monthSwim[9],monthSwim[10],monthSwim[11],monthSwim[12],monthSwim[13],monthSwim[14],monthSwim[15],monthSwim[16],monthSwim[17],monthSwim[18],monthSwim[19],monthSwim[20],monthSwim[21],monthSwim[22],monthSwim[23],monthSwim[24],monthSwim[25],monthSwim[26],monthSwim[27],monthSwim[28],monthSwim[29],monthSwim[30]];        
+    } else if (xValues.length == 31) {
+        yValuesSwim = [monthSwim[1],monthSwim[2],monthSwim[3],monthSwim[4],monthSwim[5],monthSwim[6],monthSwim[7],monthSwim[8],monthSwim[9],monthSwim[10],monthSwim[11],monthSwim[12],monthSwim[13],monthSwim[14],monthSwim[15],monthSwim[16],monthSwim[17],monthSwim[18],monthSwim[19],monthSwim[20],monthSwim[21],monthSwim[22],monthSwim[23],monthSwim[24],monthSwim[25],monthSwim[26],monthSwim[27],monthSwim[28],monthSwim[29],monthSwim[30],monthSwim[31]];
+    }
+
+    new Chart("swim", {
+        type: "line",
+        data: {
+        labels: xValues,
+        datasets: [{
+            data: yValuesSwim,
+            pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderColor: 'rgb(0, 54, 116)',
+            pointRadius: 4,
+            pointHitRadius: 8,
+            pointBorderWidth: 2,
+            borderColor: 'rgb(0, 54, 116)',
+            backgroundColor: 'rgba(0, 54, 116, 0.3)'
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {display: false},
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    fontSize: 8
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    min:0
+                  }
+                }]
+            }
+        }
+    });
+} //swim chart
+
+{
     let yValuesSquats = [];
     if (xValues.length == 28) {
         yValuesSquats = [monthSquats[1],monthSquats[2],monthSquats[3],monthSquats[4],monthSquats[5],monthSquats[6],monthSquats[7],monthSquats[8],monthSquats[9],monthSquats[10],monthSquats[11],monthSquats[12],monthSquats[13],monthSquats[14],monthSquats[15],monthSquats[16],monthSquats[17],monthSquats[18],monthSquats[19],monthSquats[20],monthSquats[21],monthSquats[22],monthSquats[23],monthSquats[24],monthSquats[25],monthSquats[26],monthSquats[27],monthSquats[28]];
@@ -286,6 +340,7 @@ if (dayOfMonth=="01"){
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(43, 12, 63)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(43, 12, 63)',
             backgroundColor: 'rgba(43, 12, 63, 0.3)'

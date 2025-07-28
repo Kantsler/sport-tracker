@@ -5,6 +5,7 @@ const yearPullUps = JSON.parse(localStorage.getItem("yearPullUps")) || {};
 const yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
 const yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
 const yearChinUps = JSON.parse(localStorage.getItem("yearChinUps")) || {};
+const yearSwim = JSON.parse(localStorage.getItem("yearSwim")) || {};
 const yearSquats = JSON.parse(localStorage.getItem("yearSquats")) || {};
 const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
 
@@ -21,6 +22,7 @@ const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', '
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(206, 13, 13)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(206, 13, 13)',
             backgroundColor: 'rgba(206, 13, 13, 0.3)'
@@ -59,6 +61,7 @@ const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', '
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(44, 138, 182)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(44, 138, 182)',
             backgroundColor: 'rgba(44, 138, 182, 0.3)'
@@ -97,6 +100,7 @@ const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', '
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(15, 114, 23)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(15, 114, 23)',
             backgroundColor: 'rgba(15, 114, 23, 0.3)'
@@ -135,6 +139,7 @@ const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', '
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(22, 19, 182)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(22, 19, 182)',
             backgroundColor: 'rgba(22, 19, 182, 0.3)'
@@ -173,6 +178,7 @@ const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', '
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(203, 238, 78)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(203, 238, 78)',
             backgroundColor: 'rgba(203, 238, 78, 0.3)'
@@ -200,6 +206,45 @@ const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', '
 } //chin ups chart
 
 {
+    let yValuesSwim = [yearSwim[1], yearSwim[2], yearSwim[3], yearSwim[4], yearSwim[5], yearSwim[6], yearSwim[7], yearSwim[8], yearSwim[9], yearSwim[10], yearSwim[11], yearSwim[12]];
+
+    new Chart("swim", {
+        type: "line",
+        data: {
+        labels: xValues,
+        datasets: [{
+            data: yValuesSwim,
+            pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderColor: 'rgb(0, 54, 116)',
+            pointRadius: 4,
+            pointHitRadius: 8,
+            pointBorderWidth: 2,
+            borderColor: 'rgb(0, 54, 116)',
+            backgroundColor: 'rgba(0, 54, 116, 0.3)'
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {display: false},
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    fontSize: 8
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    min:0
+                  }
+                }]
+            }
+        }
+    });
+} //swim chart
+
+{
     let yValuesSquats = [yearSquats[1], yearSquats[2], yearSquats[3], yearSquats[4], yearSquats[5], yearSquats[6], yearSquats[7], yearSquats[8], yearSquats[9], yearSquats[10], yearSquats[11], yearSquats[12]];
 
     new Chart("squats", {
@@ -211,6 +256,7 @@ const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', '
             pointBackgroundColor: 'rgb(255,255,255)',
             pointBorderColor: 'rgb(43, 12, 63)',
             pointRadius: 4,
+            pointHitRadius: 8,
             pointBorderWidth: 2,
             borderColor: 'rgb(43, 12, 63)',
             backgroundColor: 'rgba(43, 12, 63, 0.3)'

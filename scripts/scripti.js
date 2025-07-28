@@ -3,36 +3,63 @@ import ('https://tomashubelbauer.github.io/github-pages-local-storage/index.js')
 const now = new Date();
 const newDay = now.getDay();
 const month = new Date().getMonth()+1;
+const year = now.getFullYear();
 
 if (localStorage.currentDay!=newDay) {
     {
-        const yearPushUps = JSON.parse(localStorage.getItem("yearPushUps")) || {};
+        let yearPushUps = JSON.parse(localStorage.getItem("yearPushUps")) || {};
         yearPushUps[month] = +yearPushUps[month] + +localStorage.scorePushUps;
+        if (localStorage.currentYear!=year) {
+            yearPushUps = [];
+        }
         localStorage.setItem("yearPushUps", JSON.stringify(yearPushUps));
     } //year push ups
     {
-        const yearPullUps = JSON.parse(localStorage.getItem("yearPullUps")) || {};
+        let yearPullUps = JSON.parse(localStorage.getItem("yearPullUps")) || {};
         yearPullUps[month] = +yearPullUps[month] + +localStorage.scorePullUps;
+        if (localStorage.currentYear!=year) {
+            yearPullUps = [];
+        }
         localStorage.setItem("yearPullUps", JSON.stringify(yearPullUps));
     } //year pull ups
     {
-        const yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
-        yearSitUps[month] = +yearSitUps[month] + +localStorage.scoreSitUps;
-        localStorage.setItem("yearSitUps", JSON.stringify(yearSitUps));
-    } //year sit ups
-    {
-        const yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
-        yearBurpees[month] = +yearBurpees[month] + +localStorage.scoreBurpees;
-        localStorage.setItem("yearBurpees", JSON.stringify(yearBurpees));       
-    } //year burpees
-    {
-        const yearChinUps = JSON.parse(localStorage.getItem("yearChinUps")) || {};
+        let yearChinUps = JSON.parse(localStorage.getItem("yearChinUps")) || {};
         yearChinUps[month] = +yearChinUps[month] + +localStorage.scoreChinUps;
+        if (localStorage.currentYear!=year) {
+            yearChinUps = [];
+        }
         localStorage.setItem("yearChinUps", JSON.stringify(yearChinUps)); 
     } //year chin ups
     {
-        const yearSquats = JSON.parse(localStorage.getItem("yearSquats")) || {};
+        let yearSwim = JSON.parse(localStorage.getItem("yearSwim")) || {};
+        yearSwim[month] = +yearSwim[month] + +localStorage.scoreSwim;
+        if (localStorage.currentYear!=year) {
+            yearSwim = [];
+        }
+        localStorage.setItem("yearSwim", JSON.stringify(yearSwim));
+    } //year swim
+    {
+        let yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
+        yearSitUps[month] = +yearSitUps[month] + +localStorage.scoreSitUps;
+        if (localStorage.currentYear!=year) {
+            yearSitUps = [];
+        }
+        localStorage.setItem("yearSitUps", JSON.stringify(yearSitUps));
+    } //year sit ups
+    {
+        let yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
+        yearBurpees[month] = +yearBurpees[month] + +localStorage.scoreBurpees;
+        if (localStorage.currentYear!=year) {
+            yearBurpees = [];
+        }
+        localStorage.setItem("yearBurpees", JSON.stringify(yearBurpees));       
+    } //year burpees
+    {
+        let yearSquats = JSON.parse(localStorage.getItem("yearSquats")) || {};
         yearSquats[month] = +yearSquats[month] + +localStorage.scoreSquats;
+        if (localStorage.currentYear!=year) {
+            yearSquats = [];
+        }
         localStorage.setItem("yearSquats", JSON.stringify(yearSquats));
     } //year squats
 
@@ -41,16 +68,21 @@ if (localStorage.currentDay!=newDay) {
     localStorage.scoreSitUps = 0;
     localStorage.scoreBurpees = 0;
     localStorage.scoreChinUps = 0;
+    localStorage.scoreSwim = 0;
     localStorage.scoreSquats = 0;
 
     localStorage.currentDay = newDay;
+    localStorage.currentYear = year;
 }
+
+
 if (newDay==0) {
     localStorage.sundayPushUps = localStorage.scorePushUps;
     localStorage.sundayPullUps = localStorage.scorePullUps;
     localStorage.sundaySitUps = localStorage.scoreSitUps;
     localStorage.sundayBurpees = localStorage.scoreBurpees;
     localStorage.sundayChinUps = localStorage.scoreChinUps;
+    localStorage.sundaySwim = localStorage.scoreSwim;
     localStorage.sundaySquats = localStorage.scoreSquats;
 }
 if (newDay==1) {
@@ -59,6 +91,7 @@ if (newDay==1) {
     localStorage.mondaySitUps = localStorage.scoreSitUps;
     localStorage.mondayBurpees = localStorage.scoreBurpees;
     localStorage.mondayChinUps = localStorage.scoreChinUps;
+    localStorage.mondaySwim = localStorage.scoreSwim;
     localStorage.mondaySquats = localStorage.scoreSquats;
     {
         localStorage.removeItem("sundayPushUps");
@@ -66,6 +99,7 @@ if (newDay==1) {
         localStorage.removeItem("sundaySitUps");
         localStorage.removeItem("sundayBurpees");
         localStorage.removeItem("sundayChinUps");
+        localStorage.removeItem("sundaySwim");
         localStorage.removeItem("sundaySquats");
 
         localStorage.removeItem("saturdayPushUps");
@@ -73,6 +107,7 @@ if (newDay==1) {
         localStorage.removeItem("saturdaySitUps");
         localStorage.removeItem("saturdayBurpees");
         localStorage.removeItem("saturdayChinUps");
+        localStorage.removeItem("saturdaySwim");
         localStorage.removeItem("saturdaySquats");
 
         localStorage.removeItem("fridayPushUps");
@@ -80,6 +115,7 @@ if (newDay==1) {
         localStorage.removeItem("fridaySitUps");
         localStorage.removeItem("fridayBurpees");
         localStorage.removeItem("fridayChinUps");
+        localStorage.removeItem("fridaySwim");
         localStorage.removeItem("fridaySquats");
 
         localStorage.removeItem("thursdayPushUps");
@@ -87,6 +123,7 @@ if (newDay==1) {
         localStorage.removeItem("thursdaySitUps");
         localStorage.removeItem("thursdayBurpees");
         localStorage.removeItem("thursdayChinUps");
+        localStorage.removeItem("thursdaySwim");
         localStorage.removeItem("thursdaySquats");
 
         localStorage.removeItem("wensdayPushUps");
@@ -94,6 +131,7 @@ if (newDay==1) {
         localStorage.removeItem("wensdaySitUps");
         localStorage.removeItem("wensdayBurpees");
         localStorage.removeItem("wensdayChinUps");
+        localStorage.removeItem("wensdaySwim");
         localStorage.removeItem("wensdaySquats");
 
         localStorage.removeItem("tuesdayPushUps");
@@ -101,6 +139,7 @@ if (newDay==1) {
         localStorage.removeItem("tuesdaySitUps");
         localStorage.removeItem("tuesdayBurpees");
         localStorage.removeItem("tuesdayChinUps");
+        localStorage.removeItem("tuesdaySquats");
         localStorage.removeItem("tuesdaySquats");
     }
 }
@@ -110,6 +149,7 @@ if (newDay==2) {
     localStorage.tuesdaySitUps = localStorage.scoreSitUps;
     localStorage.tuesdayBurpees = localStorage.scoreBurpees;
     localStorage.tuesdayChinUps = localStorage.scoreChinUps;
+    localStorage.tuesdaySwim = localStorage.scoreSwim;
     localStorage.tuesdaySquats = localStorage.scoreSquats;
 }
 if (newDay==3) {
@@ -118,6 +158,7 @@ if (newDay==3) {
     localStorage.wensdaySitUps = localStorage.scoreSitUps;
     localStorage.wensdayBurpees = localStorage.scoreBurpees;
     localStorage.wensdayChinUps = localStorage.scoreChinUps;
+    localStorage.wensdaySwim = localStorage.scoreSwim;
     localStorage.wensdaySquats = localStorage.scoreSquats;
 }
 if (newDay==4) {
@@ -126,6 +167,7 @@ if (newDay==4) {
     localStorage.thursdaySitUps = localStorage.scoreSitUps;
     localStorage.thursdayBurpees = localStorage.scoreBurpees;
     localStorage.thursdayChinUps = localStorage.scoreChinUps;
+    localStorage.thursdaySwim = localStorage.scoreSwim;
     localStorage.thursdaySquats = localStorage.scoreSquats;
 }
 if (newDay==5) {
@@ -134,6 +176,7 @@ if (newDay==5) {
     localStorage.fridaySitUps = localStorage.scoreSitUps;
     localStorage.fridayBurpees = localStorage.scoreBurpees;
     localStorage.fridayChinUps = localStorage.scoreChinUps;
+    localStorage.fridaySwim = localStorage.scoreSwim;
     localStorage.fridaySquats = localStorage.scoreSquats;
 }
 if (newDay==6) {
@@ -142,6 +185,7 @@ if (newDay==6) {
     localStorage.saturdaySitUps = localStorage.scoreSitUps;
     localStorage.saturdayBurpees = localStorage.scoreBurpees;
     localStorage.saturdayChinUps = localStorage.scoreChinUps;
+    localStorage.saturdaySwim = localStorage.scoreSwim;
     localStorage.saturdaySquats = localStorage.scoreSquats;
 }
 
@@ -152,6 +196,7 @@ if (newDay==6) {
     if (Boolean(localStorage.scoreSitUps) == false) {localStorage.scoreSitUps=0}
     if (Boolean(localStorage.scoreBurpees) == false) {localStorage.scoreBurpees=0}
     if (Boolean(localStorage.scoreChinUps) == false) {localStorage.scoreChinUps=0}
+    if (Boolean(localStorage.scoreSwim) == false) {localStorage.scoreSwim=0}
     if (Boolean(localStorage.scoreSquats) == false) {localStorage.scoreSquats=0}
 } // score undefined prevent
 
@@ -296,6 +341,21 @@ if (newDay==6) {
 } //chin ups maths
 
 {
+    document.getElementById("swim").innerText = localStorage.scoreSwim;
+    let scoreSwim = document.getElementById("swim");
+    localStorage.scoreSwim = +scoreSwim.innerText;
+    function m100swim() {
+        if (+scoreSwim.innerText>0) {
+            scoreSwim.innerText = +scoreSwim.innerText - 100;
+            localStorage.scoreSwim = scoreSwim.innerText;    
+        }}
+    function p100swim() {
+        scoreSwim.innerText = +scoreSwim.innerText + 100;
+        localStorage.scoreSwim = scoreSwim.innerText;
+    }
+} //swim maths
+
+{
     document.getElementById("squat").innerText = localStorage.scoreSquats;
     let scoreSquats = document.getElementById("squat");
     localStorage.scoreSquats = +scoreSquats.innerText;
@@ -350,7 +410,7 @@ if (newDay==6) {
 
 const today = new Date().getDate();
 {
-    const monthPushUps = JSON.parse(localStorage.getItem("monthPushUps")) || {};
+    let monthPushUps = JSON.parse(localStorage.getItem("monthPushUps")) || {};
     if (!monthPushUps[today]) {
         monthPushUps[today] = 0;
     }
@@ -358,11 +418,17 @@ const today = new Date().getDate();
     if (!monthPushUps.sum) {
         monthPushUps.sum = 0;
     }
+    if (localStorage.currentMonth!=month) {
+        monthPushUps = [];
+    }
     localStorage.setItem("monthPushUps", JSON.stringify(monthPushUps));
 } //month push ups
 
 {
     let monthPullUps = JSON.parse(localStorage.getItem("monthPullUps")) || {};
+    if (localStorage.currentMonth!=month) {
+        monthPullUps = [];
+    }
     if (!monthPullUps[today]) {
         monthPullUps[today] = 0;
     }
@@ -370,35 +436,14 @@ const today = new Date().getDate();
     if (!monthPullUps.sum) {
         monthPullUps.sum = 0;
     }
+    if (localStorage.currentMonth!=month) {
+        monthPullUps = [];
+    }
     localStorage.setItem("monthPullUps", JSON.stringify(monthPullUps));
 } //month pull ups
 
 {
-    const monthSitUps = JSON.parse(localStorage.getItem("monthSitUps")) || {};
-    if (!monthSitUps[today]) {
-        monthSitUps[today] = 0;
-    }
-    monthSitUps[today] = localStorage.scoreSitUps;
-    if (!monthSitUps.sum) {
-        monthSitUps.sum = 0;
-    }
-    localStorage.setItem("monthSitUps", JSON.stringify(monthSitUps));
-} //month sit ups
-
-{
-    const monthBurpees = JSON.parse(localStorage.getItem("monthBurpees")) || {};
-    if (!monthBurpees[today]) {
-        monthBurpees[today] = 0;
-    }
-    monthBurpees[today] = localStorage.scoreBurpees;
-    if (!monthBurpees.sum) {
-        monthBurpees.sum = 0;
-    }
-    localStorage.setItem("monthBurpees", JSON.stringify(monthBurpees));
-} //month burpees
-
-{
-    const monthChinUps = JSON.parse(localStorage.getItem("monthChinUps")) || {};
+    let monthChinUps = JSON.parse(localStorage.getItem("monthChinUps")) || {};
     if (!monthChinUps[today]) {
         monthChinUps[today] = 0;
     }
@@ -406,17 +451,72 @@ const today = new Date().getDate();
     if (!monthChinUps.sum) {
         monthChinUps.sum = 0;
     }
+    if (localStorage.currentMonth!=month) {
+        monthChinUps = [];
+    }
     localStorage.setItem("monthChinUps", JSON.stringify(monthChinUps));
 } //month chin ups
 
 {
-    const monthSquats = JSON.parse(localStorage.getItem("monthSquats")) || {};
+    let monthSwim = JSON.parse(localStorage.getItem("monthSwim")) || {};
+    if (!monthSwim[today]) {
+        monthSwim[today] = 0;
+    }
+    monthSwim[today] = localStorage.scoreSwim;
+    if (!monthSwim.sum) {
+        monthSwim.sum = 0;
+    }
+    if (localStorage.currentMonth!=month) {
+        monthSwim = [];
+    }
+    localStorage.setItem("monthSwim", JSON.stringify(monthSwim));
+} //month swim
+
+{
+    let monthSitUps = JSON.parse(localStorage.getItem("monthSitUps")) || {};
+    if (!monthSitUps[today]) {
+        monthSitUps[today] = 0;
+    }
+    monthSitUps[today] = localStorage.scoreSitUps;
+    if (!monthSitUps.sum) {
+        monthSitUps.sum = 0;
+    }
+    if (localStorage.currentMonth!=month) {
+        monthSitUps = [];
+    }
+    localStorage.setItem("monthSitUps", JSON.stringify(monthSitUps));
+} //month sit ups
+
+{
+    let monthBurpees = JSON.parse(localStorage.getItem("monthBurpees")) || {};
+    if (localStorage.currentMonth!=month) {
+        monthBurpees = [];
+    }
+    if (!monthBurpees[today]) {
+        monthBurpees[today] = 0;
+    }
+    monthBurpees[today] = localStorage.scoreBurpees;
+    if (!monthBurpees.sum) {
+        monthBurpees.sum = 0;
+    }
+    if (localStorage.currentMonth!=month) {
+        monthBurpees = [];
+    }
+    localStorage.setItem("monthBurpees", JSON.stringify(monthBurpees));
+} //month burpees
+
+{
+    let monthSquats = JSON.parse(localStorage.getItem("monthSquats")) || {};
     if (!monthSquats[today]) {
         monthSquats[today] = 0;
     }
     monthSquats[today] = localStorage.scoreSquats;
     if (!monthSquats.sum) {
         monthSquats.sum = 0;
+    }
+    if (localStorage.currentMonth!=month) {
+        monthSquats = [];
+        localStorage.currentMonth = month;
     }
     localStorage.setItem("monthSquats", JSON.stringify(monthSquats));
 } //month squats

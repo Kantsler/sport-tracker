@@ -162,6 +162,38 @@ const xValues = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"];
 } //chin ups chart
 
 {
+    const yValuesSwim = [localStorage.mondaySwim, localStorage.tuesdaySwim, localStorage.wensdaySwim, localStorage.thursdaySwim, localStorage.fridaySwim, localStorage.saturdaySwim, localStorage.sundaySwim];
+    const barColorsSwim = ["rgb(168, 137, 50)", "rgb(50, 168, 82)", "rgb(50, 62, 168)", "rgb(168, 58, 50)","rgb(209, 206, 4)","rgb(129, 50, 168)", "rgb(168, 50, 123)"];
+    new Chart("swim", {
+    type: "bar",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColorsSwim,
+        data: yValuesSwim
+        }]
+    },
+    options: {
+        legend: {display: false},
+        title: {display: false},
+        scales: {
+            xAxes: [{
+              ticks: {
+                fontColor: '#FFF'
+              }
+            }],
+            yAxes: [{
+              ticks: {
+                fontColor: '#FFF',
+                min:0
+              }
+            }]
+        }
+    }
+    });
+} //swim chart
+
+{
     const yValuesSquats = [localStorage.mondaySquats, localStorage.tuesdaySquats, localStorage.wensdaySquats, localStorage.thursdaySquats, localStorage.fridaySquats, localStorage.saturdaySquats, localStorage.sundaySquats];
     const barColorsSquats = ["rgb(50, 62, 168)", "rgb(168, 137, 50)","rgb(50, 168, 82)","rgb(168, 50, 123)","rgb(168, 58, 50)","rgb(209, 206, 4)","rgb(129, 50, 168)"];
     new Chart("squats", {

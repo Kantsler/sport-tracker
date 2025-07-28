@@ -74,7 +74,7 @@ canvas {
 #chart-container {
     display: grid;
     grid-template-columns: 75vw;
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: auto;
     justify-items: center;
     align-items: center;
     background-color: rgb(68, 68, 68);
@@ -94,6 +94,8 @@ canvas {
     margin-left: auto;
     cursor: pointer;
     position: relative;
+    margin-right: 0.4em;
+    margin-top: 0.3em;
 }
 
 #close-sidebar {
@@ -252,7 +254,7 @@ button {
 @media screen and (max-width: 600px) {
     #chart-container {
         grid-template-columns: repeat(1, 90vw);
-        grid-template-rows: repeat(6, auto);
+        grid-template-rows: auto;
     }
     canvas {
         width: 90vw;

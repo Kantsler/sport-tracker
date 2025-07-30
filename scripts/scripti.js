@@ -5,63 +5,8 @@ const newDay = now.getDay();
 const month = new Date().getMonth()+1;
 const year = now.getFullYear();
 
+
 if (localStorage.currentDay!=newDay) {
-    {
-        let yearPushUps = JSON.parse(localStorage.getItem("yearPushUps")) || {};
-        yearPushUps[month] = +yearPushUps[month] + +localStorage.scorePushUps;
-        if (localStorage.currentYear!=year) {
-            yearPushUps = [];
-        }
-        localStorage.setItem("yearPushUps", JSON.stringify(yearPushUps));
-    } //year push ups
-    {
-        let yearPullUps = JSON.parse(localStorage.getItem("yearPullUps")) || {};
-        yearPullUps[month] = +yearPullUps[month] + +localStorage.scorePullUps;
-        if (localStorage.currentYear!=year) {
-            yearPullUps = [];
-        }
-        localStorage.setItem("yearPullUps", JSON.stringify(yearPullUps));
-    } //year pull ups
-    {
-        let yearChinUps = JSON.parse(localStorage.getItem("yearChinUps")) || {};
-        yearChinUps[month] = +yearChinUps[month] + +localStorage.scoreChinUps;
-        if (localStorage.currentYear!=year) {
-            yearChinUps = [];
-        }
-        localStorage.setItem("yearChinUps", JSON.stringify(yearChinUps)); 
-    } //year chin ups
-    {
-        let yearSwim = JSON.parse(localStorage.getItem("yearSwim")) || {};
-        yearSwim[month] = +yearSwim[month] + +localStorage.scoreSwim;
-        if (localStorage.currentYear!=year) {
-            yearSwim = [];
-        }
-        localStorage.setItem("yearSwim", JSON.stringify(yearSwim));
-    } //year swim
-    {
-        let yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
-        yearSitUps[month] = +yearSitUps[month] + +localStorage.scoreSitUps;
-        if (localStorage.currentYear!=year) {
-            yearSitUps = [];
-        }
-        localStorage.setItem("yearSitUps", JSON.stringify(yearSitUps));
-    } //year sit ups
-    {
-        let yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
-        yearBurpees[month] = +yearBurpees[month] + +localStorage.scoreBurpees;
-        if (localStorage.currentYear!=year) {
-            yearBurpees = [];
-        }
-        localStorage.setItem("yearBurpees", JSON.stringify(yearBurpees));       
-    } //year burpees
-    {
-        let yearSquats = JSON.parse(localStorage.getItem("yearSquats")) || {};
-        yearSquats[month] = +yearSquats[month] + +localStorage.scoreSquats;
-        if (localStorage.currentYear!=year) {
-            yearSquats = [];
-        }
-        localStorage.setItem("yearSquats", JSON.stringify(yearSquats));
-    } //year squats
 
     localStorage.scorePushUps = 0;
     localStorage.scorePullUps = 0;
@@ -415,32 +360,41 @@ const today = new Date().getDate();
         monthPushUps[today] = 0;
     }
     monthPushUps[today] = localStorage.scorePushUps;
-    if (!monthPushUps.sum) {
-        monthPushUps.sum = 0;
+    let yearPushUps = JSON.parse(localStorage.getItem("yearPushUps")) || {};
+    yearPushUps[month] = monthPushUps.reduce((acc, val) => {
+        const num = Number(val);
+        return acc + (isNaN(num) ? 0 : num);
+        }, 0);
+    if (localStorage.currentYear!=year) {
+        yearPushUps = [];
     }
     if (localStorage.currentMonth!=month) {
         monthPushUps = [];
     }
+    localStorage.setItem("yearPushUps", JSON.stringify(yearPushUps));
     localStorage.setItem("monthPushUps", JSON.stringify(monthPushUps));
-} //month push ups
+} //month&year push ups
 
 {
     let monthPullUps = JSON.parse(localStorage.getItem("monthPullUps")) || {};
-    if (localStorage.currentMonth!=month) {
-        monthPullUps = [];
-    }
     if (!monthPullUps[today]) {
         monthPullUps[today] = 0;
     }
     monthPullUps[today] = localStorage.scorePullUps;
-    if (!monthPullUps.sum) {
-        monthPullUps.sum = 0;
+    let yearPullUps = JSON.parse(localStorage.getItem("yearPullUps")) || {};
+    yearPullUps[month] = monthPullUps.reduce((acc, val) => {
+        const num = Number(val);
+        return acc + (isNaN(num) ? 0 : num);
+        }, 0);
+    if (localStorage.currentYear!=year) {
+        yearPullUps = [];
     }
     if (localStorage.currentMonth!=month) {
         monthPullUps = [];
     }
+    localStorage.setItem("yearPullUps", JSON.stringify(yearPullUps));
     localStorage.setItem("monthPullUps", JSON.stringify(monthPullUps));
-} //month pull ups
+} //month&year pull ups
 
 {
     let monthChinUps = JSON.parse(localStorage.getItem("monthChinUps")) || {};
@@ -448,14 +402,20 @@ const today = new Date().getDate();
         monthChinUps[today] = 0;
     }
     monthChinUps[today] = localStorage.scoreChinUps;
-    if (!monthChinUps.sum) {
-        monthChinUps.sum = 0;
+    let yearChinUps = JSON.parse(localStorage.getItem("yearChinUps")) || {};
+    yearChinUps[month] = monthChinUps.reduce((acc, val) => {
+        const num = Number(val);
+        return acc + (isNaN(num) ? 0 : num);
+        }, 0);
+    if (localStorage.currentYear!=year) {
+        yearChinUps = [];
     }
     if (localStorage.currentMonth!=month) {
         monthChinUps = [];
     }
+    localStorage.setItem("yearChinUps", JSON.stringify(yearChinUps));
     localStorage.setItem("monthChinUps", JSON.stringify(monthChinUps));
-} //month chin ups
+} //month&year chin ups
 
 {
     let monthSwim = JSON.parse(localStorage.getItem("monthSwim")) || {};
@@ -463,12 +423,18 @@ const today = new Date().getDate();
         monthSwim[today] = 0;
     }
     monthSwim[today] = localStorage.scoreSwim;
-    if (!monthSwim.sum) {
-        monthSwim.sum = 0;
+    let yearSwim = JSON.parse(localStorage.getItem("yearSwim")) || {};
+    yearSwim[month] = monthSwim.reduce((acc, val) => {
+        const num = Number(val);
+        return acc + (isNaN(num) ? 0 : num);
+        }, 0);
+    if (localStorage.currentYear!=year) {
+        yearSwim = [];
     }
     if (localStorage.currentMonth!=month) {
         monthSwim = [];
     }
+    localStorage.setItem("yearSwim", JSON.stringify(yearSwim));
     localStorage.setItem("monthSwim", JSON.stringify(monthSwim));
 } //month swim
 
@@ -478,32 +444,41 @@ const today = new Date().getDate();
         monthSitUps[today] = 0;
     }
     monthSitUps[today] = localStorage.scoreSitUps;
-    if (!monthSitUps.sum) {
-        monthSitUps.sum = 0;
+    let yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
+    yearSitUps[month] = monthSitUps.reduce((acc, val) => {
+        const num = Number(val);
+        return acc + (isNaN(num) ? 0 : num);
+        }, 0);
+    if (localStorage.currentYear!=year) {
+        yearSitUps = [];
     }
     if (localStorage.currentMonth!=month) {
         monthSitUps = [];
     }
+    localStorage.setItem("yearSitUps", JSON.stringify(yearSitUps));
     localStorage.setItem("monthSitUps", JSON.stringify(monthSitUps));
-} //month sit ups
+} //month&year sit ups
 
 {
     let monthBurpees = JSON.parse(localStorage.getItem("monthBurpees")) || {};
-    if (localStorage.currentMonth!=month) {
-        monthBurpees = [];
-    }
     if (!monthBurpees[today]) {
         monthBurpees[today] = 0;
     }
     monthBurpees[today] = localStorage.scoreBurpees;
-    if (!monthBurpees.sum) {
-        monthBurpees.sum = 0;
+    let yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
+    yearBurpees[month] = monthBurpees.reduce((acc, val) => {
+        const num = Number(val);
+        return acc + (isNaN(num) ? 0 : num);
+        }, 0);
+    if (localStorage.currentYear!=year) {
+        yearBurpees = [];
     }
     if (localStorage.currentMonth!=month) {
         monthBurpees = [];
     }
+    localStorage.setItem("yearBurpees", JSON.stringify(yearBurpees));
     localStorage.setItem("monthBurpees", JSON.stringify(monthBurpees));
-} //month burpees
+} //month&year burpees
 
 {
     let monthSquats = JSON.parse(localStorage.getItem("monthSquats")) || {};
@@ -511,13 +486,19 @@ const today = new Date().getDate();
         monthSquats[today] = 0;
     }
     monthSquats[today] = localStorage.scoreSquats;
-    if (!monthSquats.sum) {
-        monthSquats.sum = 0;
+    let yearSquats = JSON.parse(localStorage.getItem("yearSquats")) || {};
+    yearSquats[month] = monthSquats.reduce((acc, val) => {
+        const num = Number(val);
+        return acc + (isNaN(num) ? 0 : num);
+        }, 0);
+    if (localStorage.currentYear!=year) {
+        yearSquats = [];
     }
     if (localStorage.currentMonth!=month) {
         monthSquats = [];
         localStorage.currentMonth = month;
     }
+    localStorage.setItem("yearSquats", JSON.stringify(yearSquats));
     localStorage.setItem("monthSquats", JSON.stringify(monthSquats));
-} //month squats
+} //month&year squats
 

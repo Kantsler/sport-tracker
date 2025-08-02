@@ -10,10 +10,11 @@ let xValues = [];
 dayOfMonth = "01";
 const monthPushUps = JSON.parse(localStorage.getItem("monthPushUps")) || {};
 const monthPullUps = JSON.parse(localStorage.getItem("monthPullUps")) || {};
-const monthSitUps = JSON.parse(localStorage.getItem("monthSitUps")) || {};
-const monthBurpees = JSON.parse(localStorage.getItem("monthBurpees")) || {};
 const monthChinUps = JSON.parse(localStorage.getItem("monthChinUps")) || {};
 const monthSwim = JSON.parse(localStorage.getItem("monthSwim")) || {};
+const monthRun = JSON.parse(localStorage.getItem("monthRun")) || {};
+const monthSitUps = JSON.parse(localStorage.getItem("monthSitUps")) || {};
+const monthBurpees = JSON.parse(localStorage.getItem("monthBurpees")) || {};
 const monthSquats = JSON.parse(localStorage.getItem("monthSquats")) || {};
 
 
@@ -128,102 +129,6 @@ if (dayOfMonth=="01"){
 } //pull ups chart
 
 {
-    let yValuesSitUps = [];
-    if (xValues.length == 28) {
-        yValuesSitUps = [monthSitUps[1],monthSitUps[2],monthSitUps[3],monthSitUps[4],monthSitUps[5],monthSitUps[6],monthSitUps[7],monthSitUps[8],monthSitUps[9],monthSitUps[10],monthSitUps[11],monthSitUps[12],monthSitUps[13],monthSitUps[14],monthSitUps[15],monthSitUps[16],monthSitUps[17],monthSitUps[18],monthSitUps[19],monthSitUps[20],monthSitUps[21],monthSitUps[22],monthSitUps[23],monthSitUps[24],monthSitUps[25],monthSitUps[26],monthSitUps[27],monthSitUps[28]];
-    } else if (xValues.length == 29) {
-        yValuesSitUps = [monthSitUps[1],monthSitUps[2],monthSitUps[3],monthSitUps[4],monthSitUps[5],monthSitUps[6],monthSitUps[7],monthSitUps[8],monthSitUps[9],monthSitUps[10],monthSitUps[11],monthSitUps[12],monthSitUps[13],monthSitUps[14],monthSitUps[15],monthSitUps[16],monthSitUps[17],monthSitUps[18],monthSitUps[19],monthSitUps[20],monthSitUps[21],monthSitUps[22],monthSitUps[23],monthSitUps[24],monthSitUps[25],monthSitUps[26],monthSitUps[27],monthSitUps[28],monthSitUps[29]];
-    } else if (xValues.length == 30) {
-        yValuesSitUps = [monthSitUps[1],monthSitUps[2],monthSitUps[3],monthSitUps[4],monthSitUps[5],monthSitUps[6],monthSitUps[7],monthSitUps[8],monthSitUps[9],monthSitUps[10],monthSitUps[11],monthSitUps[12],monthSitUps[13],monthSitUps[14],monthSitUps[15],monthSitUps[16],monthSitUps[17],monthSitUps[18],monthSitUps[19],monthSitUps[20],monthSitUps[21],monthSitUps[22],monthSitUps[23],monthSitUps[24],monthSitUps[25],monthSitUps[26],monthSitUps[27],monthSitUps[28],monthSitUps[29],monthSitUps[30]];        
-    } else if (xValues.length == 31) {
-        yValuesSitUps = [monthSitUps[1],monthSitUps[2],monthSitUps[3],monthSitUps[4],monthSitUps[5],monthSitUps[6],monthSitUps[7],monthSitUps[8],monthSitUps[9],monthSitUps[10],monthSitUps[11],monthSitUps[12],monthSitUps[13],monthSitUps[14],monthSitUps[15],monthSitUps[16],monthSitUps[17],monthSitUps[18],monthSitUps[19],monthSitUps[20],monthSitUps[21],monthSitUps[22],monthSitUps[23],monthSitUps[24],monthSitUps[25],monthSitUps[26],monthSitUps[27],monthSitUps[28],monthSitUps[29],monthSitUps[30],monthSitUps[31]];
-    }
-
-    new Chart("sitUps", {
-        type: "line",
-        data: {
-        labels: xValues,
-        datasets: [{
-            data: yValuesSitUps,
-            pointBackgroundColor: 'rgb(255,255,255)',
-            pointBorderColor: 'rgb(15, 114, 23)',
-            pointRadius: 4,
-            pointHitRadius: 8,
-            pointBorderWidth: 2,
-            borderColor: 'rgb(15, 114, 23)',
-            backgroundColor: 'rgba(15, 114, 23, 0.3)'
-        }]
-        },
-        options: {
-            legend: {display: false},
-            title: {display: false},
-            scales: {
-                xAxes: [{
-                  ticks: {
-                    fontColor: '#FFF',
-                    fontSize: 8
-                  }
-                }],
-                yAxes: [{
-                  ticks: {
-                    fontColor: '#FFF',
-                    min:0
-                  }
-                }]
-            }
-        }
-    });
-} // sit ups chart
-
-{
-    let yValuesBurpees = [];
-    if (xValues.length == 28) {
-        yValuesBurpees = [monthBurpees[1],monthBurpees[2],monthBurpees[3],monthBurpees[4],monthBurpees[5],monthBurpees[6],monthBurpees[7],monthBurpees[8],monthBurpees[9],monthBurpees[10],monthBurpees[11],monthBurpees[12],monthBurpees[13],monthBurpees[14],monthBurpees[15],monthBurpees[16],monthBurpees[17],monthBurpees[18],monthBurpees[19],monthBurpees[20],monthBurpees[21],monthBurpees[22],monthBurpees[23],monthBurpees[24],monthBurpees[25],monthBurpees[26],monthBurpees[27],monthBurpees[28]];
-    } else if (xValues.length == 29) {
-        yValuesBurpees = [monthBurpees[1],monthBurpees[2],monthBurpees[3],monthBurpees[4],monthBurpees[5],monthBurpees[6],monthBurpees[7],monthBurpees[8],monthBurpees[9],monthBurpees[10],monthBurpees[11],monthBurpees[12],monthBurpees[13],monthBurpees[14],monthBurpees[15],monthBurpees[16],monthBurpees[17],monthBurpees[18],monthBurpees[19],monthBurpees[20],monthBurpees[21],monthBurpees[22],monthBurpees[23],monthBurpees[24],monthBurpees[25],monthBurpees[26],monthBurpees[27],monthBurpees[28],monthBurpees[29]];
-    } else if (xValues.length == 30) {
-        yValuesBurpees = [monthBurpees[1],monthBurpees[2],monthBurpees[3],monthBurpees[4],monthBurpees[5],monthBurpees[6],monthBurpees[7],monthBurpees[8],monthBurpees[9],monthBurpees[10],monthBurpees[11],monthBurpees[12],monthBurpees[13],monthBurpees[14],monthBurpees[15],monthBurpees[16],monthBurpees[17],monthBurpees[18],monthBurpees[19],monthBurpees[20],monthBurpees[21],monthBurpees[22],monthBurpees[23],monthBurpees[24],monthBurpees[25],monthBurpees[26],monthBurpees[27],monthBurpees[28],monthBurpees[29],monthBurpees[30]];        
-    } else if (xValues.length == 31) {
-        yValuesBurpees = [monthBurpees[1],monthBurpees[2],monthBurpees[3],monthBurpees[4],monthBurpees[5],monthBurpees[6],monthBurpees[7],monthBurpees[8],monthBurpees[9],monthBurpees[10],monthBurpees[11],monthBurpees[12],monthBurpees[13],monthBurpees[14],monthBurpees[15],monthBurpees[16],monthBurpees[17],monthBurpees[18],monthBurpees[19],monthBurpees[20],monthBurpees[21],monthBurpees[22],monthBurpees[23],monthBurpees[24],monthBurpees[25],monthBurpees[26],monthBurpees[27],monthBurpees[28],monthBurpees[29],monthBurpees[30],monthBurpees[31]];
-    }
-
-    new Chart("burpees", {
-        type: "line",
-        data: {
-        labels: xValues,
-        datasets: [{
-            data: yValuesBurpees,
-            pointBackgroundColor: 'rgb(255,255,255)',
-            pointBorderColor: 'rgb(22, 19, 182)',
-            pointRadius: 4,
-            pointHitRadius: 8,
-            pointBorderWidth: 2,
-            borderColor: 'rgb(22, 19, 182)',
-            backgroundColor: 'rgba(22, 19, 182, 0.3)'
-        }]
-        },
-        options: {
-            legend: {display: false},
-            title: {display: false},
-            scales: {
-                xAxes: [{
-                  ticks: {
-                    fontColor: '#FFF',
-                    fontSize: 8
-                  }
-                }],
-                yAxes: [{
-                  ticks: {
-                    fontColor: '#FFF',
-                    min:0
-                  }
-                }]
-            }
-        }
-    });
-} //burpees chart
-
-{
     let yValuesChinUps = [];
     if (xValues.length == 28) {
         yValuesChinUps = [monthChinUps[1],monthChinUps[2],monthChinUps[3],monthChinUps[4],monthChinUps[5],monthChinUps[6],monthChinUps[7],monthChinUps[8],monthChinUps[9],monthChinUps[10],monthChinUps[11],monthChinUps[12],monthChinUps[13],monthChinUps[14],monthChinUps[15],monthChinUps[16],monthChinUps[17],monthChinUps[18],monthChinUps[19],monthChinUps[20],monthChinUps[21],monthChinUps[22],monthChinUps[23],monthChinUps[24],monthChinUps[25],monthChinUps[26],monthChinUps[27],monthChinUps[28]];
@@ -318,6 +223,150 @@ if (dayOfMonth=="01"){
         }
     });
 } //swim chart
+
+{
+    let yValuesRun = [];
+    if (xValues.length == 28) {
+        yValuesRun = [monthRun[1],monthRun[2],monthRun[3],monthRun[4],monthRun[5],monthRun[6],monthRun[7],monthRun[8],monthRun[9],monthRun[10],monthRun[11],monthRun[12],monthRun[13],monthRun[14],monthRun[15],monthRun[16],monthRun[17],monthRun[18],monthRun[19],monthRun[20],monthRun[21],monthRun[22],monthRun[23],monthRun[24],monthRun[25],monthRun[26],monthRun[27],monthRun[28]];
+    } else if (xValues.length == 29) {
+        yValuesRun = [monthRun[1],monthRun[2],monthRun[3],monthRun[4],monthRun[5],monthRun[6],monthRun[7],monthRun[8],monthRun[9],monthRun[10],monthRun[11],monthRun[12],monthRun[13],monthRun[14],monthRun[15],monthRun[16],monthRun[17],monthRun[18],monthRun[19],monthRun[20],monthRun[21],monthRun[22],monthRun[23],monthRun[24],monthRun[25],monthRun[26],monthRun[27],monthRun[28],monthRun[29]];
+    } else if (xValues.length == 30) {
+        yValuesRun = [monthRun[1],monthRun[2],monthRun[3],monthRun[4],monthRun[5],monthRun[6],monthRun[7],monthRun[8],monthRun[9],monthRun[10],monthRun[11],monthRun[12],monthRun[13],monthRun[14],monthRun[15],monthRun[16],monthRun[17],monthRun[18],monthRun[19],monthRun[20],monthRun[21],monthRun[22],monthRun[23],monthRun[24],monthRun[25],monthRun[26],monthRun[27],monthRun[28],monthRun[29],monthRun[30]];        
+    } else if (xValues.length == 31) {
+        yValuesRun = [monthRun[1],monthRun[2],monthRun[3],monthRun[4],monthRun[5],monthRun[6],monthRun[7],monthRun[8],monthRun[9],monthRun[10],monthRun[11],monthRun[12],monthRun[13],monthRun[14],monthRun[15],monthRun[16],monthRun[17],monthRun[18],monthRun[19],monthRun[20],monthRun[21],monthRun[22],monthRun[23],monthRun[24],monthRun[25],monthRun[26],monthRun[27],monthRun[28],monthRun[29],monthRun[30],monthRun[31]];
+    }
+
+    new Chart("run", {
+        type: "line",
+        data: {
+        labels: xValues,
+        datasets: [{
+            data: yValuesRun,
+            pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderColor: 'rgb(148, 11, 11)',
+            pointRadius: 4,
+            pointHitRadius: 8,
+            pointBorderWidth: 2,
+            borderColor: 'rgb(148, 11, 11)',
+            backgroundColor: 'rgba(148, 11, 11, 0.3)'
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {display: false},
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    fontSize: 8
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    min:0
+                  }
+                }]
+            }
+        }
+    });
+} //run chart
+
+{
+    let yValuesSitUps = [];
+    if (xValues.length == 28) {
+        yValuesSitUps = [monthSitUps[1],monthSitUps[2],monthSitUps[3],monthSitUps[4],monthSitUps[5],monthSitUps[6],monthSitUps[7],monthSitUps[8],monthSitUps[9],monthSitUps[10],monthSitUps[11],monthSitUps[12],monthSitUps[13],monthSitUps[14],monthSitUps[15],monthSitUps[16],monthSitUps[17],monthSitUps[18],monthSitUps[19],monthSitUps[20],monthSitUps[21],monthSitUps[22],monthSitUps[23],monthSitUps[24],monthSitUps[25],monthSitUps[26],monthSitUps[27],monthSitUps[28]];
+    } else if (xValues.length == 29) {
+        yValuesSitUps = [monthSitUps[1],monthSitUps[2],monthSitUps[3],monthSitUps[4],monthSitUps[5],monthSitUps[6],monthSitUps[7],monthSitUps[8],monthSitUps[9],monthSitUps[10],monthSitUps[11],monthSitUps[12],monthSitUps[13],monthSitUps[14],monthSitUps[15],monthSitUps[16],monthSitUps[17],monthSitUps[18],monthSitUps[19],monthSitUps[20],monthSitUps[21],monthSitUps[22],monthSitUps[23],monthSitUps[24],monthSitUps[25],monthSitUps[26],monthSitUps[27],monthSitUps[28],monthSitUps[29]];
+    } else if (xValues.length == 30) {
+        yValuesSitUps = [monthSitUps[1],monthSitUps[2],monthSitUps[3],monthSitUps[4],monthSitUps[5],monthSitUps[6],monthSitUps[7],monthSitUps[8],monthSitUps[9],monthSitUps[10],monthSitUps[11],monthSitUps[12],monthSitUps[13],monthSitUps[14],monthSitUps[15],monthSitUps[16],monthSitUps[17],monthSitUps[18],monthSitUps[19],monthSitUps[20],monthSitUps[21],monthSitUps[22],monthSitUps[23],monthSitUps[24],monthSitUps[25],monthSitUps[26],monthSitUps[27],monthSitUps[28],monthSitUps[29],monthSitUps[30]];        
+    } else if (xValues.length == 31) {
+        yValuesSitUps = [monthSitUps[1],monthSitUps[2],monthSitUps[3],monthSitUps[4],monthSitUps[5],monthSitUps[6],monthSitUps[7],monthSitUps[8],monthSitUps[9],monthSitUps[10],monthSitUps[11],monthSitUps[12],monthSitUps[13],monthSitUps[14],monthSitUps[15],monthSitUps[16],monthSitUps[17],monthSitUps[18],monthSitUps[19],monthSitUps[20],monthSitUps[21],monthSitUps[22],monthSitUps[23],monthSitUps[24],monthSitUps[25],monthSitUps[26],monthSitUps[27],monthSitUps[28],monthSitUps[29],monthSitUps[30],monthSitUps[31]];
+    }
+
+    new Chart("sitUps", {
+        type: "line",
+        data: {
+        labels: xValues,
+        datasets: [{
+            data: yValuesSitUps,
+            pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderColor: 'rgb(15, 114, 23)',
+            pointRadius: 4,
+            pointHitRadius: 8,
+            pointBorderWidth: 2,
+            borderColor: 'rgb(15, 114, 23)',
+            backgroundColor: 'rgba(15, 114, 23, 0.3)'
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {display: false},
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    fontSize: 8
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    min:0
+                  }
+                }]
+            }
+        }
+    });
+} //sit ups chart
+
+{
+    let yValuesBurpees = [];
+    if (xValues.length == 28) {
+        yValuesBurpees = [monthBurpees[1],monthBurpees[2],monthBurpees[3],monthBurpees[4],monthBurpees[5],monthBurpees[6],monthBurpees[7],monthBurpees[8],monthBurpees[9],monthBurpees[10],monthBurpees[11],monthBurpees[12],monthBurpees[13],monthBurpees[14],monthBurpees[15],monthBurpees[16],monthBurpees[17],monthBurpees[18],monthBurpees[19],monthBurpees[20],monthBurpees[21],monthBurpees[22],monthBurpees[23],monthBurpees[24],monthBurpees[25],monthBurpees[26],monthBurpees[27],monthBurpees[28]];
+    } else if (xValues.length == 29) {
+        yValuesBurpees = [monthBurpees[1],monthBurpees[2],monthBurpees[3],monthBurpees[4],monthBurpees[5],monthBurpees[6],monthBurpees[7],monthBurpees[8],monthBurpees[9],monthBurpees[10],monthBurpees[11],monthBurpees[12],monthBurpees[13],monthBurpees[14],monthBurpees[15],monthBurpees[16],monthBurpees[17],monthBurpees[18],monthBurpees[19],monthBurpees[20],monthBurpees[21],monthBurpees[22],monthBurpees[23],monthBurpees[24],monthBurpees[25],monthBurpees[26],monthBurpees[27],monthBurpees[28],monthBurpees[29]];
+    } else if (xValues.length == 30) {
+        yValuesBurpees = [monthBurpees[1],monthBurpees[2],monthBurpees[3],monthBurpees[4],monthBurpees[5],monthBurpees[6],monthBurpees[7],monthBurpees[8],monthBurpees[9],monthBurpees[10],monthBurpees[11],monthBurpees[12],monthBurpees[13],monthBurpees[14],monthBurpees[15],monthBurpees[16],monthBurpees[17],monthBurpees[18],monthBurpees[19],monthBurpees[20],monthBurpees[21],monthBurpees[22],monthBurpees[23],monthBurpees[24],monthBurpees[25],monthBurpees[26],monthBurpees[27],monthBurpees[28],monthBurpees[29],monthBurpees[30]];        
+    } else if (xValues.length == 31) {
+        yValuesBurpees = [monthBurpees[1],monthBurpees[2],monthBurpees[3],monthBurpees[4],monthBurpees[5],monthBurpees[6],monthBurpees[7],monthBurpees[8],monthBurpees[9],monthBurpees[10],monthBurpees[11],monthBurpees[12],monthBurpees[13],monthBurpees[14],monthBurpees[15],monthBurpees[16],monthBurpees[17],monthBurpees[18],monthBurpees[19],monthBurpees[20],monthBurpees[21],monthBurpees[22],monthBurpees[23],monthBurpees[24],monthBurpees[25],monthBurpees[26],monthBurpees[27],monthBurpees[28],monthBurpees[29],monthBurpees[30],monthBurpees[31]];
+    }
+
+    new Chart("burpees", {
+        type: "line",
+        data: {
+        labels: xValues,
+        datasets: [{
+            data: yValuesBurpees,
+            pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderColor: 'rgb(22, 19, 182)',
+            pointRadius: 4,
+            pointHitRadius: 8,
+            pointBorderWidth: 2,
+            borderColor: 'rgb(22, 19, 182)',
+            backgroundColor: 'rgba(22, 19, 182, 0.3)'
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {display: false},
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    fontSize: 8
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    min:0
+                  }
+                }]
+            }
+        }
+    });
+} //burpees chart
 
 {
     let yValuesSquats = [];

@@ -2,10 +2,11 @@ import ('https://tomashubelbauer.github.io/github-pages-local-storage/index.js')
 
 const yearPushUps = JSON.parse(localStorage.getItem("yearPushUps")) || {}; 
 const yearPullUps = JSON.parse(localStorage.getItem("yearPullUps")) || {};
-const yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
-const yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
 const yearChinUps = JSON.parse(localStorage.getItem("yearChinUps")) || {};
 const yearSwim = JSON.parse(localStorage.getItem("yearSwim")) || {};
+const yearRun = JSON.parse(localStorage.getItem("yearRun")) || {};
+const yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
+const yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
 const yearSquats = JSON.parse(localStorage.getItem("yearSquats")) || {};
 const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
 
@@ -89,84 +90,6 @@ const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', '
 } //pull ups chart
 
 {
-    let yValuesSitUps = [yearSitUps[1], yearSitUps[2], yearSitUps[3], yearSitUps[4], yearSitUps[5], yearSitUps[6], yearSitUps[7], yearSitUps[8], yearSitUps[9], yearSitUps[10], yearSitUps[11], yearSitUps[12]];
-
-    new Chart("sitUps", {
-        type: "line",
-        data: {
-        labels: xValues,
-        datasets: [{
-            data: yValuesSitUps,
-            pointBackgroundColor: 'rgb(255,255,255)',
-            pointBorderColor: 'rgb(15, 114, 23)',
-            pointRadius: 4,
-            pointHitRadius: 8,
-            pointBorderWidth: 2,
-            borderColor: 'rgb(15, 114, 23)',
-            backgroundColor: 'rgba(15, 114, 23, 0.3)'
-        }]
-        },
-        options: {
-            legend: {display: false},
-            title: {display: false},
-            scales: {
-                xAxes: [{
-                  ticks: {
-                    fontColor: '#FFF',
-                    fontSize: 8
-                  }
-                }],
-                yAxes: [{
-                  ticks: {
-                    fontColor: '#FFF',
-                    min:0
-                  }
-                }]
-            }
-        }
-    });
-} // sit ups chart
-
-{
-    let yValuesBurpees = [yearBurpees[1], yearBurpees[2], yearBurpees[3], yearBurpees[4], yearBurpees[5], yearBurpees[6], yearBurpees[7], yearBurpees[8], yearBurpees[9], yearBurpees[10], yearBurpees[11], yearBurpees[12]];
-
-    new Chart("burpees", {
-        type: "line",
-        data: {
-        labels: xValues,
-        datasets: [{
-            data: yValuesBurpees,
-            pointBackgroundColor: 'rgb(255,255,255)',
-            pointBorderColor: 'rgb(22, 19, 182)',
-            pointRadius: 4,
-            pointHitRadius: 8,
-            pointBorderWidth: 2,
-            borderColor: 'rgb(22, 19, 182)',
-            backgroundColor: 'rgba(22, 19, 182, 0.3)'
-        }]
-        },
-        options: {
-            legend: {display: false},
-            title: {display: false},
-            scales: {
-                xAxes: [{
-                  ticks: {
-                    fontColor: '#FFF',
-                    fontSize: 8
-                  }
-                }],
-                yAxes: [{
-                  ticks: {
-                    fontColor: '#FFF',
-                    min:0
-                  }
-                }]
-            }
-        }
-    });
-} //burpees chart
-
-{
     let yValuesChinUps = [yearChinUps[1], yearChinUps[2], yearChinUps[3], yearChinUps[4], yearChinUps[5], yearChinUps[6], yearChinUps[7], yearChinUps[8], yearChinUps[9], yearChinUps[10], yearChinUps[11], yearChinUps[12]];
 
     new Chart("chinUps", {
@@ -243,6 +166,123 @@ const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', '
         }
     });
 } //swim chart
+
+{
+    let yValuesRun = [yearRun[1], yearRun[2], yearRun[3], yearRun[4], yearRun[5], yearRun[6], yearRun[7], yearRun[8], yearRun[9], yearRun[10], yearRun[11], yearRun[12]];
+
+    new Chart("run", {
+        type: "line",
+        data: {
+        labels: xValues,
+        datasets: [{
+            data: yValuesRun,
+            pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderColor: 'rgb(148, 11, 11)',
+            pointRadius: 4,
+            pointHitRadius: 8,
+            pointBorderWidth: 2,
+            borderColor: 'rgb(148, 11, 11)',
+            backgroundColor: 'rgba(148, 11, 11, 0.3)'
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {display: false},
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    fontSize: 8
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    min:0
+                  }
+                }]
+            }
+        }
+    });
+} //run chart
+
+{
+    let yValuesSitUps = [yearSitUps[1], yearSitUps[2], yearSitUps[3], yearSitUps[4], yearSitUps[5], yearSitUps[6], yearSitUps[7], yearSitUps[8], yearSitUps[9], yearSitUps[10], yearSitUps[11], yearSitUps[12]];
+
+    new Chart("sitUps", {
+        type: "line",
+        data: {
+        labels: xValues,
+        datasets: [{
+            data: yValuesSitUps,
+            pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderColor: 'rgb(15, 114, 23)',
+            pointRadius: 4,
+            pointHitRadius: 8,
+            pointBorderWidth: 2,
+            borderColor: 'rgb(15, 114, 23)',
+            backgroundColor: 'rgba(15, 114, 23, 0.3)'
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {display: false},
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    fontSize: 8
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    min:0
+                  }
+                }]
+            }
+        }
+    });
+} // sit ups chart
+
+{
+    let yValuesBurpees = [yearBurpees[1], yearBurpees[2], yearBurpees[3], yearBurpees[4], yearBurpees[5], yearBurpees[6], yearBurpees[7], yearBurpees[8], yearBurpees[9], yearBurpees[10], yearBurpees[11], yearBurpees[12]];
+
+    new Chart("burpees", {
+        type: "line",
+        data: {
+        labels: xValues,
+        datasets: [{
+            data: yValuesBurpees,
+            pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderColor: 'rgb(22, 19, 182)',
+            pointRadius: 4,
+            pointHitRadius: 8,
+            pointBorderWidth: 2,
+            borderColor: 'rgb(22, 19, 182)',
+            backgroundColor: 'rgba(22, 19, 182, 0.3)'
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {display: false},
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    fontSize: 8
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    min:0
+                  }
+                }]
+            }
+        }
+    });
+} //burpees chart
 
 {
     let yValuesSquats = [yearSquats[1], yearSquats[2], yearSquats[3], yearSquats[4], yearSquats[5], yearSquats[6], yearSquats[7], yearSquats[8], yearSquats[9], yearSquats[10], yearSquats[11], yearSquats[12]];

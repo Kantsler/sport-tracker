@@ -469,10 +469,7 @@ const today = new Date().getDate();
     }
     monthRun[today] = localStorage.scoreRun;
     let yearRun = JSON.parse(localStorage.getItem("yearRun")) || {};
-    yearRun[month] = monthRun.reduce((acc, val) => {
-        const num = Number(val);
-        return acc + (isNaN(num) ? 0 : num);
-        }, 0);
+    
     if (localStorage.currentYear!=year) {
         yearRun = [];
     }

@@ -13,6 +13,7 @@ if (localStorage.currentDay!=newDay) {
     localStorage.scoreChinUps = 0;
     localStorage.scoreSwim = 0;
     localStorage.scoreRun = 0;
+    localStorage.scoreWalk = 0;
     localStorage.scoreSitUps = 0;
     localStorage.scoreBurpees = 0;
     localStorage.scoreSquats = 0;
@@ -28,6 +29,7 @@ if (newDay==0) {
     localStorage.sundayChinUps = localStorage.scoreChinUps;
     localStorage.sundaySwim = localStorage.scoreSwim;
     localStorage.sundayRun = localStorage.scoreRun;
+    localStorage.sundayWalk = localStorage.scoreWalk;
     localStorage.sundaySitUps = localStorage.scoreSitUps;
     localStorage.sundayBurpees = localStorage.scoreBurpees;
     localStorage.sundaySquats = localStorage.scoreSquats;
@@ -38,56 +40,69 @@ if (newDay==1) {
     localStorage.mondayChinUps = localStorage.scoreChinUps;
     localStorage.mondaySwim = localStorage.scoreSwim;
     localStorage.mondayRun = localStorage.scoreRun;
+    localStorage.mondayWalk = localStorage.scoreWalk;
     localStorage.mondaySitUps = localStorage.scoreSitUps;
     localStorage.mondayBurpees = localStorage.scoreBurpees;
     localStorage.mondaySquats = localStorage.scoreSquats;
     {
         localStorage.removeItem("sundayPushUps");
         localStorage.removeItem("sundayPullUps");
-        localStorage.removeItem("sundaySitUps");
-        localStorage.removeItem("sundayBurpees");
         localStorage.removeItem("sundayChinUps");
         localStorage.removeItem("sundaySwim");
+        localStorage.removeItem("sundayRun");
+        localStorage.removeItem("sundayWalk");
+        localStorage.removeItem("sundaySitUps");
+        localStorage.removeItem("sundayBurpees");
         localStorage.removeItem("sundaySquats");
 
         localStorage.removeItem("saturdayPushUps");
         localStorage.removeItem("saturdayPullUps");
-        localStorage.removeItem("saturdaySitUps");
-        localStorage.removeItem("saturdayBurpees");
         localStorage.removeItem("saturdayChinUps");
         localStorage.removeItem("saturdaySwim");
+        localStorage.removeItem("saturdayRun");
+        localStorage.removeItem("saturdayWalk");
+        localStorage.removeItem("saturdaySitUps");
+        localStorage.removeItem("saturdayBurpees");
         localStorage.removeItem("saturdaySquats");
 
         localStorage.removeItem("fridayPushUps");
         localStorage.removeItem("fridayPullUps");
-        localStorage.removeItem("fridaySitUps");
-        localStorage.removeItem("fridayBurpees");
         localStorage.removeItem("fridayChinUps");
         localStorage.removeItem("fridaySwim");
+        localStorage.removeItem("fridayRun");
+        localStorage.removeItem("fridayWalk");
+        localStorage.removeItem("fridaySitUps");
+        localStorage.removeItem("fridayBurpees");
         localStorage.removeItem("fridaySquats");
 
         localStorage.removeItem("thursdayPushUps");
         localStorage.removeItem("thursdayPullUps");
-        localStorage.removeItem("thursdaySitUps");
-        localStorage.removeItem("thursdayBurpees");
         localStorage.removeItem("thursdayChinUps");
         localStorage.removeItem("thursdaySwim");
+        localStorage.removeItem("thursdayRun");
+        localStorage.removeItem("thursdayWalk");
+        localStorage.removeItem("thursdaySitUps");
+        localStorage.removeItem("thursdayBurpees");
         localStorage.removeItem("thursdaySquats");
 
         localStorage.removeItem("wensdayPushUps");
         localStorage.removeItem("wensdayPullUps");
-        localStorage.removeItem("wensdaySitUps");
-        localStorage.removeItem("wensdayBurpees");
         localStorage.removeItem("wensdayChinUps");
         localStorage.removeItem("wensdaySwim");
+        localStorage.removeItem("wensdayRun");
+        localStorage.removeItem("wensdayWalk");
+        localStorage.removeItem("wensdaySitUps");
+        localStorage.removeItem("wensdayBurpees");
         localStorage.removeItem("wensdaySquats");
 
         localStorage.removeItem("tuesdayPushUps");
         localStorage.removeItem("tuesdayPullUps");
+        localStorage.removeItem("tuesdayChinUps");
+        localStorage.removeItem("tuesdaySwim");
+        localStorage.removeItem("tuesdayRun");
+        localStorage.removeItem("tuesdayWalk");
         localStorage.removeItem("tuesdaySitUps");
         localStorage.removeItem("tuesdayBurpees");
-        localStorage.removeItem("tuesdayChinUps");
-        localStorage.removeItem("tuesdaySquats");
         localStorage.removeItem("tuesdaySquats");
     }
 }
@@ -97,6 +112,7 @@ if (newDay==2) {
     localStorage.tuesdayChinUps = localStorage.scoreChinUps;
     localStorage.tuesdaySwim = localStorage.scoreSwim;
     localStorage.tuesdayRun = localStorage.scoreRun;
+    localStorage.tuesdayWalk = localStorage.scoreWalk;
     localStorage.tuesdaySitUps = localStorage.scoreSitUps;
     localStorage.tuesdayBurpees = localStorage.scoreBurpees;
     localStorage.tuesdaySquats = localStorage.scoreSquats;
@@ -107,6 +123,7 @@ if (newDay==3) {
     localStorage.wensdayChinUps = localStorage.scoreChinUps;
     localStorage.wensdaySwim = localStorage.scoreSwim;
     localStorage.wensdayRun = localStorage.scoreRun;
+    localStorage.wensdayWalk = localStorage.scoreWalk;
     localStorage.wensdaySitUps = localStorage.scoreSitUps;
     localStorage.wensdayBurpees = localStorage.scoreBurpees;
     localStorage.wensdaySquats = localStorage.scoreSquats;
@@ -117,6 +134,7 @@ if (newDay==4) {
     localStorage.thursdayChinUps = localStorage.scoreChinUps;
     localStorage.thursdaySwim = localStorage.scoreSwim;
     localStorage.thursdayRun = localStorage.scoreRun;
+    localStorage.thursdayWalk = localStorage.scoreWalk;
     localStorage.thursdaySitUps = localStorage.scoreSitUps;
     localStorage.thursdayBurpees = localStorage.scoreBurpees;
     localStorage.thursdaySquats = localStorage.scoreSquats;
@@ -127,6 +145,7 @@ if (newDay==5) {
     localStorage.fridayChinUps = localStorage.scoreChinUps;
     localStorage.fridaySwim = localStorage.scoreSwim;
     localStorage.fridayRun = localStorage.scoreRun;
+    localStorage.fridayWalk = localStorage.scoreWalk;
     localStorage.fridaySitUps = localStorage.scoreSitUps;
     localStorage.fridayBurpees = localStorage.scoreBurpees;
     localStorage.fridaySquats = localStorage.scoreSquats;
@@ -137,6 +156,7 @@ if (newDay==6) {
     localStorage.saturdayChinUps = localStorage.scoreChinUps;
     localStorage.saturdaySwim = localStorage.scoreSwim;
     localStorage.saturdayRun = localStorage.scoreRun;
+    localStorage.saturdayWalk = localStorage.scoreWalk;
     localStorage.saturdaySitUps = localStorage.scoreSitUps;
     localStorage.saturdayBurpees = localStorage.scoreBurpees;
     localStorage.saturdaySquats = localStorage.scoreSquats;
@@ -149,6 +169,7 @@ if (newDay==6) {
     if (Boolean(localStorage.scoreChinUps) == false) {localStorage.scoreChinUps=0}
     if (Boolean(localStorage.scoreSwim) == false) {localStorage.scoreSwim=0}
     if (Boolean(localStorage.scoreRun) == false) {localStorage.scoreRun=0}
+    if (Boolean(localStorage.scoreWalk) == false) {localStorage.scoreWalk=0}
     if (Boolean(localStorage.scoreSitUps) == false) {localStorage.scoreSitUps=0}
     if (Boolean(localStorage.scoreBurpees) == false) {localStorage.scoreBurpees=0}
     if (Boolean(localStorage.scoreSquats) == false) {localStorage.scoreSquats=0}
@@ -269,6 +290,21 @@ if (newDay==6) {
 } //run maths
 
 {
+    document.getElementById("walk").innerText = localStorage.scoreWalk;
+    let scoreWalk = document.getElementById("walk");
+    localStorage.scoreWalk = +scoreWalk.innerText;
+    function m500walk() {
+        if (+scoreWalk.innerText>0) {
+            scoreWalk.innerText = +scoreWalk.innerText - 500;
+            localStorage.scoreWalk = scoreWalk.innerText;    
+        }}
+    function p500walk() {
+        scoreWalk.innerText = +scoreWalk.innerText + 500;
+        localStorage.scoreWalk = scoreWalk.innerText;
+    }
+} //walk maths
+
+{
     document.getElementById("sit-up").innerText = localStorage.scoreSitUps;
     let scoreSitUps = document.getElementById("sit-up");
     localStorage.scoreSitUps = +scoreSitUps.innerText;
@@ -375,7 +411,7 @@ if (newDay==6) {
         }, 800);
         }
     });
-}
+} //navbar
 
 const today = new Date().getDate();
 {
@@ -468,7 +504,6 @@ const today = new Date().getDate();
         monthRun[today] = 0;
     }
     monthRun[today] = localStorage.scoreRun;
-    monthRun = [];
     let yearRun = JSON.parse(localStorage.getItem("yearRun")) || {};
     yearRun[month] = monthRun.reduce((acc, val) => {
         const num = Number(val);
@@ -483,6 +518,27 @@ const today = new Date().getDate();
     localStorage.setItem("yearRun", JSON.stringify(yearRun));
     localStorage.setItem("monthRun", JSON.stringify(monthRun));
 } //month&year run
+
+{
+    let monthWalk = JSON.parse(localStorage.getItem("monthWalk")) || [];
+    if (!monthWalk[today]) {
+        monthWalk[today] = 0;
+    }
+    monthWalk[today] = localStorage.scoreWalk;
+    let yearWalk = JSON.parse(localStorage.getItem("yearWalk")) || [];
+    yearWalk[month] = monthWalk.reduce((acc, val) => {
+        const num = Number(val);
+        return acc + (isNaN(num) ? 0 : num);
+        }, 0);
+    if (localStorage.currentYear!=year) {
+        yearWalk = [];
+    }
+    if (localStorage.currentMonth!=month) {
+        monthWalk = [];
+    }
+    localStorage.setItem("yearWalk", JSON.stringify(yearWalk));
+    localStorage.setItem("monthWalk", JSON.stringify(monthWalk));
+} //month&year walk
 
 {
     let monthSitUps = JSON.parse(localStorage.getItem("monthSitUps")) || {};

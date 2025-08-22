@@ -107,7 +107,49 @@ a {
 }
 
 
+#streakLabel {
+    font-size: 1.8rem;
+    color: black;
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    border: 4px solid orangered;
+    border-radius: 10%;
+    justify-self: center;
+    text-align: center;
+}
 
+#statsLabel {
+    font-size: 2.2rem;
+    color: black;
+    padding: 10px;
+    margin: 15px 5px 0 5px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10%;
+    justify-self: center;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    height: auto;
+    width: 70%;
+    background-color: rgb(68, 68, 68);
+}
+
+.caption {
+    font-size: 1.7em;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 5%;
+    padding: 1%;
+    text-align: center;
+}
 
 @media screen and (max-width: 820px) {
     #open-sidebar, #close-sidebar {
@@ -123,7 +165,6 @@ a {
         z-index: 10;
         border-left: 1px solid black;
         transition: right 300ms ease-in-out;
-        font-size: 2.5em;
     }
     nav ul {
         flex-direction: column;
@@ -152,4 +193,24 @@ a {
         margin-bottom: 3%;
         justify-self: left;
     }
+    
+    #container {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(auto);
+        margin: 5% 5% 5% 5%;
+    }
+    #streakLabel {
+        font-size: 1.5em;
+    }
+    #statsLabel {
+        font-size: 1.7em;
+    }
 }
+
+@media screen and (max-width: 600px) {
+    #container {
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(auto);
+    }
+}
+   

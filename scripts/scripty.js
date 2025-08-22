@@ -5,6 +5,7 @@ const yearPullUps = JSON.parse(localStorage.getItem("yearPullUps")) || {};
 const yearChinUps = JSON.parse(localStorage.getItem("yearChinUps")) || {};
 const yearSwim = JSON.parse(localStorage.getItem("yearSwim")) || {};
 const yearRun = JSON.parse(localStorage.getItem("yearRun")) || {};
+const yearWalk = JSON.parse(localStorage.getItem("yearWalk")) || {};
 const yearSitUps = JSON.parse(localStorage.getItem("yearSitUps")) || {};
 const yearBurpees = JSON.parse(localStorage.getItem("yearBurpees")) || {};
 const yearSquats = JSON.parse(localStorage.getItem("yearSquats")) || {};
@@ -205,6 +206,45 @@ const xValues = ['Январь', 'Февраль', 'Март', 'Апрель', '
         }
     });
 } //run chart
+
+{
+    let yValuesWalk = [yearWalk[1], yearWalk[2], yearWalk[3], yearWalk[4], yearWalk[5], yearWalk[6], yearWalk[7], yearWalk[8], yearWalk[9], yearWalk[10], yearWalk[11], yearWalk[12]];
+
+    new Chart("walk", {
+        type: "line",
+        data: {
+        labels: xValues,
+        datasets: [{
+            data: yValuesWalk,
+            pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderColor: 'rgb(148, 11, 11)',
+            pointRadius: 4,
+            pointHitRadius: 8,
+            pointBorderWidth: 2,
+            borderColor: 'rgb(148, 11, 11)',
+            backgroundColor: 'rgba(148, 11, 11, 0.3)'
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {display: false},
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    fontSize: 8
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    min:0
+                  }
+                }]
+            }
+        }
+    });
+} //walk chart
 
 {
     let yValuesSitUps = [yearSitUps[1], yearSitUps[2], yearSitUps[3], yearSitUps[4], yearSitUps[5], yearSitUps[6], yearSitUps[7], yearSitUps[8], yearSitUps[9], yearSitUps[10], yearSitUps[11], yearSitUps[12]];

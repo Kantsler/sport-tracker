@@ -162,6 +162,38 @@ const xValues = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"];
 } //run chart
 
 {
+    const yValuesWalk = [localStorage.mondayWalk, localStorage.tuesdayWalk, localStorage.wensdayWalk, localStorage.thursdayWalk, localStorage.fridayWalk, localStorage.saturdayWalk, localStorage.sundayWalk];
+    const barColorsWalk = ["rgba(41, 216, 25, 1)", "rgba(48, 51, 226, 1)", "rgba(168, 50, 50, 1)", "rgba(112, 36, 128, 1)","rgb(209, 206, 4)","rgba(155, 160, 223, 1)", "rgba(38, 116, 7, 1)"];
+    new Chart("walk", {
+    type: "bar",
+    data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColorsWalk,
+        data: yValuesWalk
+        }]
+    },
+    options: {
+        legend: {display: false},
+        title: {display: false},
+        scales: {
+            xAxes: [{
+              ticks: {
+                fontColor: '#FFF'
+              }
+            }],
+            yAxes: [{
+              ticks: {
+                fontColor: '#FFF',
+                min:0
+              }
+            }]
+        }
+    }
+    });
+} //walk chart
+
+{
     const yValuesSitUps = [localStorage.mondaySitUps, localStorage.tuesdaySitUps, localStorage.wensdaySitUps, localStorage.thursdaySitUps, localStorage.fridaySitUps, localStorage.saturdaySitUps, localStorage.sundaySitUps];
     const barColorsSitUps = ["rgb(50, 62, 168)", "rgb(129, 50, 168)","rgb(50, 168, 160)","rgb(209, 206, 4)","rgb(168, 50, 123)","rgb(168, 58, 50)","rgb(50, 168, 82)"];
     new Chart("sitUps", {

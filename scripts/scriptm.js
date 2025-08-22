@@ -13,6 +13,7 @@ const monthPullUps = JSON.parse(localStorage.getItem("monthPullUps")) || {};
 const monthChinUps = JSON.parse(localStorage.getItem("monthChinUps")) || {};
 const monthSwim = JSON.parse(localStorage.getItem("monthSwim")) || {};
 const monthRun = JSON.parse(localStorage.getItem("monthRun")) || {};
+const monthWalk = JSON.parse(localStorage.getItem("monthWalk")) || {};
 const monthSitUps = JSON.parse(localStorage.getItem("monthSitUps")) || {};
 const monthBurpees = JSON.parse(localStorage.getItem("monthBurpees")) || {};
 const monthSquats = JSON.parse(localStorage.getItem("monthSquats")) || {};
@@ -271,6 +272,54 @@ if (dayOfMonth=="01"){
         }
     });
 } //run chart
+
+{
+    let yValuesWalk = [];
+    if (xValues.length == 28) {
+        yValuesWalk = [monthWalk[1],monthWalk[2],monthWalk[3],monthWalk[4],monthWalk[5],monthWalk[6],monthWalk[7],monthWalk[8],monthWalk[9],monthWalk[10],monthWalk[11],monthWalk[12],monthWalk[13],monthWalk[14],monthWalk[15],monthWalk[16],monthWalk[17],monthWalk[18],monthWalk[19],monthWalk[20],monthWalk[21],monthWalk[22],monthWalk[23],monthWalk[24],monthWalk[25],monthWalk[26],monthWalk[27],monthWalk[28]];
+    } else if (xValues.length == 29) {
+        yValuesWalk = [monthWalk[1],monthWalk[2],monthWalk[3],monthWalk[4],monthWalk[5],monthWalk[6],monthWalk[7],monthWalk[8],monthWalk[9],monthWalk[10],monthWalk[11],monthWalk[12],monthWalk[13],monthWalk[14],monthWalk[15],monthWalk[16],monthWalk[17],monthWalk[18],monthWalk[19],monthWalk[20],monthWalk[21],monthWalk[22],monthWalk[23],monthWalk[24],monthWalk[25],monthWalk[26],monthWalk[27],monthWalk[28],monthWalk[29]];
+    } else if (xValues.length == 30) {
+        yValuesWalk = [monthWalk[1],monthWalk[2],monthWalk[3],monthWalk[4],monthWalk[5],monthWalk[6],monthWalk[7],monthWalk[8],monthWalk[9],monthWalk[10],monthWalk[11],monthWalk[12],monthWalk[13],monthWalk[14],monthWalk[15],monthWalk[16],monthWalk[17],monthWalk[18],monthWalk[19],monthWalk[20],monthWalk[21],monthWalk[22],monthWalk[23],monthWalk[24],monthWalk[25],monthWalk[26],monthWalk[27],monthWalk[28],monthWalk[29],monthWalk[30]];        
+    } else if (xValues.length == 31) {
+        yValuesWalk = [monthWalk[1],monthWalk[2],monthWalk[3],monthWalk[4],monthWalk[5],monthWalk[6],monthWalk[7],monthWalk[8],monthWalk[9],monthWalk[10],monthWalk[11],monthWalk[12],monthWalk[13],monthWalk[14],monthWalk[15],monthWalk[16],monthWalk[17],monthWalk[18],monthWalk[19],monthWalk[20],monthWalk[21],monthWalk[22],monthWalk[23],monthWalk[24],monthWalk[25],monthWalk[26],monthWalk[27],monthWalk[28],monthWalk[29],monthWalk[30],monthWalk[31]];
+    }
+
+    new Chart("walk", {
+        type: "line",
+        data: {
+        labels: xValues,
+        datasets: [{
+            data: yValuesWalk,
+            pointBackgroundColor: 'rgb(255,255,255)',
+            pointBorderColor: 'rgb(148, 11, 11)',
+            pointRadius: 4,
+            pointHitRadius: 8,
+            pointBorderWidth: 2,
+            borderColor: 'rgb(148, 11, 11)',
+            backgroundColor: 'rgba(148, 11, 11, 0.3)'
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {display: false},
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    fontSize: 8
+                  }
+                }],
+                yAxes: [{
+                  ticks: {
+                    fontColor: '#FFF',
+                    min:0
+                  }
+                }]
+            }
+        }
+    });
+} //walk chart
 
 {
     let yValuesSitUps = [];

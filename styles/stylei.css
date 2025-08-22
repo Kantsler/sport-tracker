@@ -136,17 +136,8 @@ button {
 .pull-ups {
     border: rgb(44, 138, 182) solid;
 }
-.sit-ups {
-    border: rgb(15, 114, 23) solid;
-}
-.burpees {
-    border:rgb(22, 19, 182) solid;
-}
 .chin-ups {
     border: rgb(203, 238, 78) solid;
-}
-.squats {
-    border: rgb(43, 12, 63) solid;
 }
 .swim {
     border: rgb(0, 54, 116) solid;
@@ -154,7 +145,18 @@ button {
 .run {
     border: rgb(148, 11, 11) solid;
 }
-
+.walk {
+    border: rgb(53, 201, 97) solid;
+}
+.sit-ups {
+    border: rgb(15, 114, 23) solid;
+}
+.burpees {
+    border:rgb(22, 19, 182) solid;
+}
+.squats {
+    border: rgb(43, 12, 63) solid;
+}
 
 #open-sidebar {
     display: none;

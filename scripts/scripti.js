@@ -4,7 +4,6 @@ const now = new Date();
 const newDay = now.getDay();
 const month = new Date().getMonth()+1;
 const year = now.getFullYear();
-localStorage.streakActive = true;
 
 if (localStorage.currentDay!=newDay) {
 

@@ -21,22 +21,6 @@ if (localStorage.currentDay!=newDay) {
     localStorage.currentYear = year;
 }
 
-
-
-if (localStorage.streakActive != true) {
-    setItem(monthPushUps, []);
-    setItem(monthPullUps, []);
-    setItem(monthChinUps, []);
-    setItem(monthSwim, []);
-    setItem(monthRun, []);
-    setItem(monthWalk, []);
-    setItem(monthSitUps, []);
-    setItem(monthBurpees, []);
-    setItem(monthSquats, []);
-}
-
-alert(localStorage.streakActive, monthPushUps, monthPullUps, monthWalk);
-
 if (newDay==0) {
     localStorage.sundayPushUps = localStorage.scorePushUps;
     localStorage.sundayPullUps = localStorage.scorePullUps;
@@ -175,7 +159,6 @@ if (newDay==6) {
     localStorage.saturdayBurpees = localStorage.scoreBurpees;
     localStorage.saturdaySquats = localStorage.scoreSquats;
 }
-
 
 {
     if (Boolean(localStorage.scorePushUps) == false) {localStorage.scorePushUps=0}

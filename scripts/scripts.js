@@ -78,7 +78,7 @@ new Chart("monthStatsReps", {
         labels: [
             "Отжимания",
             "Скручивания пресса",
-            "Подтягиваниия прямым хватом",
+            "Подтягивания прямым хватом",
             "Бёрпи",
             "Подтягивания обратным хватом",
             "Приседания"],
@@ -95,19 +95,18 @@ new Chart("monthStatsReps", {
         }]
         },
         options: {
+            label: {display: false},
             title: {display: false},
             legend: {display: false},
-            responsive: true,
-            maintainAspectRatio: true,
             options: {
-            scales: {
-            r: {
-                pointLabels: {
-                color: 'red'
+                scales: {
+                    r: {
+                        pointLabels: {
+                            color: 'red'
+                        }
+                    }
                 }
             }
-            }
-  }
         }
 });
 new Chart("monthStatsMS", {

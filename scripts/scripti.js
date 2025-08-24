@@ -22,6 +22,21 @@ if (localStorage.currentDay!=newDay) {
 }
 
 
+
+if (localStorage.streakActive != true) {
+    setItem(monthPushUps, []);
+    setItem(monthPullUps, []);
+    setItem(monthChinUps, []);
+    setItem(monthSwim, []);
+    setItem(monthRun, []);
+    setItem(monthWalk, []);
+    setItem(monthSitUps, []);
+    setItem(monthBurpees, []);
+    setItem(monthSquats, []);
+}
+
+alert(localStorage.streakActive, monthPushUps, monthPullUps, monthWalk);
+
 if (newDay==0) {
     localStorage.sundayPushUps = localStorage.scorePushUps;
     localStorage.sundayPullUps = localStorage.scorePullUps;

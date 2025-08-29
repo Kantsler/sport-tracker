@@ -5,6 +5,40 @@ const newDay = now.getDay();
 const month = new Date().getMonth()+1;
 const year = now.getFullYear();
 
+if (localStorage.firstTime != 'no') {
+    if (confirm("В первый раз? (Отвечай честно)")) {
+        let monthPushUps = JSON.parse(localStorage.getItem("monthPushUps")) || {};
+        let monthPullUps = JSON.parse(localStorage.getItem("monthPullUps")) || {};
+        let monthChinUps = JSON.parse(localStorage.getItem("monthChinUps")) || {};
+        let monthSwim = JSON.parse(localStorage.getItem("monthSwim")) || {};
+        let monthRun = JSON.parse(localStorage.getItem("monthRun")) || {};
+        let monthWalk = JSON.parse(localStorage.getItem("monthWalk")) || {};
+        let monthSitUps = JSON.parse(localStorage.getItem("monthSitUps")) || {};
+        let monthBurpees = JSON.parse(localStorage.getItem("monthBurpees")) || {};
+        let monthSquats = JSON.parse(localStorage.getItem("monthSquats")) || {};
+        monthPushUps = [];
+        monthPullUps = [];
+        monthChinUps = [];
+        monthSwim = [];
+        monthRun = [];
+        monthWalk = [];
+        monthSitUps = [];
+        monthBurpees = [];
+        monthSquats = [];
+        localStorage.setItem("monthPushUps", JSON.stringify(monthPushUps));
+        localStorage.setItem("monthPullUps", JSON.stringify(monthPullUps));
+        localStorage.setItem("monthChinUps", JSON.stringify(monthChinUps));
+        localStorage.setItem("monthSwim", JSON.stringify(monthSwim));
+        localStorage.setItem("monthRun", JSON.stringify(monthRun));
+        localStorage.setItem("monthWalk", JSON.stringify(monthWalk));
+        localStorage.setItem("monthSitUps", JSON.stringify(monthSitUps));
+        localStorage.setItem("monthBurpees", JSON.stringify(monthBurpees));
+        localStorage.setItem("monthSquats", JSON.stringify(monthSquats));
+    }
+    localStorage.firstTime = 'no';
+}
+
+
 if (localStorage.currentDay!=newDay) {
 
     localStorage.scorePushUps = 0;
